@@ -24,3 +24,6 @@ git status
     git pull
     git push
 ```
+
+
+* .gitkeep文件介绍 - git不会提交空目录,加上这个文件是为了可以把空目录页提交上去,当目录里有东西了,这个文件可以删掉
