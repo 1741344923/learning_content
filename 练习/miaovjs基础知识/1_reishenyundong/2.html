@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            ul {
+                padding: 0;
+                margin: 0;
+            }
+
+            .lis {
+                width: 80px;
+                height: 30px;
+                position: relative;
+                border: 1px solid #dddddd;
+            }
+
+            .lis a {
+                display: block;
+                line-height: 30px;
+                text-align: center;
+                text-decoration: none;
+                color: #000;
+                background-color: #f1f1f1;
+            }
+
+            .lis ul {
+                width: 140px;
+                border: 1px solid #dddddd;
+                position: absolute;
+                top: 30px;
+                left: -1px;
+                background-color: antiquewhite;
+                display: none;
+            }
+
+            .lis ul li {
+                text-align: center;
+                line-height: 30px;
+            }
+        </style>
+        <script>
+
+            // Uncaught TypeError: Cannot set property 'onmouseover' of null //空不能设置属性“鼠标”
+
+            window.onload = function (ev) {
+
+                var li = document.getElementById('lis1');
+                var ul = document.getElementById('ul1');
+                var a = document.getElementById('link');
+
+                li.onmouseover = function () {
+                    ul.style.display = 'block';
+                    a.style.background = 'yellow';
+                };
+
+                ul.onmouseout = function () {
+                    ul.style.display = 'none';
+                    a.style.background = '#f1f1f1';
+                };
+
+            };
+
+        </script>
+    </head>
+    <body>
+        <ul>
+            <li id="lis1" class="lis">
+                <a id="link" href="">微博</a>
+                <ul id="ul1">
+                    <li>私信</li>
+                    <li>评论</li>
+                    <li>@我</li>
+                </ul>
+            </li>
+        </ul>
+
+
+    </body>
+
+</html>

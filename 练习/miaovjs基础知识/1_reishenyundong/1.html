@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            ul {
+                padding: 0;
+                margin: 0;
+            }
+
+            .lis {
+                width: 80px;
+                height: 30px;
+                position: relative;
+                border: 1px solid #dddddd;
+            }
+
+            .lis a {
+                display: block;
+                line-height: 30px;
+                text-align: center;
+                text-decoration: none;
+                color: #000;
+                background-color: #f1f1f1;
+            }
+
+            .lis ul {
+                width: 140px;
+                border: 1px solid #dddddd;
+                position: absolute;
+                top: 30px;
+                left: -1px;
+                background-color: antiquewhite;
+                display: none;
+            }
+
+            .lis ul li {
+                text-align: center;
+                line-height: 30px;
+            }
+        </style>
+        <!--
+            希望把某个元素移除你的视线：
+            1、display: none;           显示为无
+            2、visibility: hidden;      隐藏   可以得到高
+            3、width / height
+            4、透明度
+            5、left  top   改变他的位置
+            6、拿一个白色的div盖住它
+            7、margin 负值
+            ......  是否可以列举12种以上？？？？
+
+
+
+            JS实现原理
+
+                写一个JS效果的步骤:
+
+                1、先实现布局
+                2、实现原理
+                3、了解JS语法
+        -->
+
+    </head>
+    <body>
+        <ul>
+            <li id="lis1" class="lis">
+                <a id="link" href="">微博</a>
+                <ul id="ul1">
+                    <li>私信</li>
+                    <li>评论</li>
+                    <li>@我</li>
+                </ul>
+            </li>
+        </ul>
+        <!--
+            JS中如何获取元素:
+                1、通过ID名称来获取元素：
+                document文件文档  get得到  element元素  by通过  id 'link'
+                document.getElementById('link')
+                2、
+                3......
+
+
+            事件: 鼠标事件、键盘事件、系统事件、表单事件、自定义事件......
+
+            onclick          点击事件                                 昂克里克
+            onmouseover      鼠标移入事件                              昂毛丝欧沃
+            onmouseout       鼠标移出事件                              昂毛丝奥特
+            onmousemove      鼠标移动时触发该事件，就像是鼠标抚摸一样的事件                       昂毛丝木
+            onmousedown      鼠标按下时发生一件事
+            onmouseup        鼠标抬起时发生一件事
+            ......
+
+
+            onload 加载完以后执行......
+            window.onload = 事情
+            img.onload
+            body.onload
+            ......
+
+            如何添加事件:
+            元素.onmouseover
+
+
+            函数: 可以理解为_命令，做一些事~~
+                function  abc  （）{   abc是名字可以任意命名。。。  // 肯定不会主动执行的！！！
+                    ......
+                }
+                1、直接调用: abc();
+                2、事件调用: 元素.事件 = 函数名 （oDiv.onclick = abc; 切记后面不要带括号。。。）
+
+                function (){};  匿名函数
+
+                元素.事件 = function (){};
+
+
+                    测试:
+                    alert(1);  带了一个确定按钮的警告框
+                    alert('ok'); 'ok' 字符串 // 单引号双引号都可以
+
+                    初学者: 最好保持一种随时写随时测试的习惯!
+
+
+            变量:
+                   var li = document.getElementById('');
+                   var num = 123;
+                   var name = 'leo';
+
+
+        -->
+        <script>
+
+            var li = document.getElementById('lis1');
+            var ul = document.getElementById('ul1');
+            var a = document.getElementById('link');
+
+            li.onmouseover = show;
+            ul.onmouseout = hide;
+
+            function show() {
+                ul.style.display = 'block';
+                a.style.background = 'yellow';
+            }
+
+            function hide() {
+                ul.style.display = 'none';
+                a.style.background = '#f1f1f1';
+            }
+        </script>
+    </body>
+
+</html>
