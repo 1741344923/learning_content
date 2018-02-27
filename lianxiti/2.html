@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            p {
+                margin: 0 0 55px 0;
+            }
+
+            #div1 input {
+                background: pink;
+                color: #ffffff;
+            }
+
+            #div2 {
+                width: 100px;
+                height: 100px;
+                border: 1px solid #dddddd;
+            }
+
+            #div3 {
+                width: 500px;
+                height: 360px;
+                border: 10px solid #dddddd;
+                position: fixed;
+                left: 50%;
+                top: 50%;
+                margin-left: -240px;
+                margin-top: -190px;
+                text-align: center;
+                padding-top: 40px;
+                display: none;
+            }
+
+            #div3 em {
+                font-style: normal;
+                display: inline-block;
+                width: 60px;
+                height: 40px;
+                line-height: 40px;
+                border: 1px solid #dddddd;
+                text-align: center;
+                margin: 0 10px;
+            }
+
+            #div3 em:hover {
+                background-color: paleturquoise;
+            }
+
+            #div3 a {
+                width: 60px;
+                height: 40px;
+                line-height: 40px;
+                background-color: green;
+                display: inline-block;
+                color: #ffffff;
+                text-align: center;
+                margin: 0 10px;
+            }
+
+            #div3.on {
+                display: block;
+            }
+        </style>
+        <script>
+            window.onload = function (ev) {
+                var oInput = document.querySelector('#input1');
+                var oDiv2 = document.querySelector('#div2');
+                var oDiv3 = document.querySelector('#div3');
+                var aEm = document.querySelectorAll('#div3 em');
+                var oA1 = document.getElementById('a1');
+                var oA2 = document.getElementById('a2');
+
+
+                oInput.onclick = function (ev2) {
+                    oDiv3.className = 'on';
+                };
+
+                for (var i = 0; i < aEm.length; i++) {
+                    aEm[i].onclick = function () {
+                        console.log(this.dataset.key, this.dataset.value);
+                        oDiv2.style[this.dataset.key] = this.dataset.value;
+                    }
+                }
+
+                oA1.onclick = function (ev2) {
+                    oDiv2.style.width = '100px';
+                    oDiv2.style.height = '100px';
+                    oDiv2.style.backgroundColor = '#ffffff';
+                };
+
+                oA2.onclick = function (ev2) {
+                    oDiv3.style.display = 'none';
+                };
+            }
+        </script>
+    </head>
+    <body>
+        <div id="div1">请为下面的DIV设置样式: <input id="input1" type="button" value="点击设计"></div>
+        <div id="div2"></div>
+        <div id="div3">
+            <p>
+                请设置背景色:
+                <em data-key="backgroundColor" data-value="yellow">黄</em>
+                <em data-key="backgroundColor" data-value="red">红</em>
+                <em data-key="backgroundColor" data-value="blue">蓝</em>
+            </p>
+            <p>
+                请设置宽度:
+                <em data-key="width" data-value="200px">200px</em>
+                <em data-key="width" data-value="300px">300px</em>
+                <em data-key="width" data-value="400px">400px</em>
+            </p>
+            <p>
+                请设置高度:
+                <em data-key="height" data-value="200px">200px</em>
+                <em data-key="height" data-value="300px">300px</em>
+                <em data-key="height" data-value="400px">400px</em>
+            </p>
+            <a id="a1">恢复</a>
+            <a id="a2">确认</a>
+        </div>
+    </body>
+</html>
