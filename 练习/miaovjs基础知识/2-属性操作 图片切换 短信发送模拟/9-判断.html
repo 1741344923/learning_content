@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <img id="img1" src="../image/2.jpg" alt="">
+
+        <script>
+            var oImg = document.getElementById('img1');
+
+            oImg.onclick = function (ev) {
+                //alert( oImg.src );
+                // ../image/2.jpg
+                //http://localhost:63342/lxhbj/%E7%BB%83%E4%B9%A0/miaovjs%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image/2.jpg
+
+                if ( oImg.src == 'http://localhost:63342/lxhbj/%E7%BB%83%E4%B9%A0/miaovjs%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/image/2.jpg' ){
+                    //oImg.src = '../image/3.jpg';
+                }
+
+                // 所有的相对路径都别拿来做判断！！！
+                // img src
+                // href='1.css' href='html/index.html'
+
+                // img src='http:www.miaov.jpg' 绝对路径可以拿来做判断www...
+                // color:red #fff rgb(250,0,0,) 颜色值不要拿来做判断！！！
+                // innerHTML 的值别拿来做判断!!!
+
+                /*
+                    oDiv.style.float = 'left';
+
+                    oDiv.style.styleFloat = 'left';
+                    oDiv.style.cssFloat = 'left';
+
+                    ie( styleFloat)
+                    非ie (cssFloat)
+
+                    .fl{float:left;}
+                    .fr{float:right;}
+
+                    <div class='right'></div>
+
+                   以上方法没必要！记录一下而已！
+
+                   技术上：必须能做到掌握兼容性（兼容性问题的解决方案）
+                   需求上：提供最准确的呈现方案
+                */
+            };
+        </script>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            window.onload = function (ev) {
+                var oBtn1 = document.getElementById('btn1');
+                var oBtn2 = document.getElementById('btn2');
+                var oBtn3 = document.getElementById('yellow');
+                var oBtn4 = document.getElementById('red');
+
+                var oP = document.getElementById('p1');
+
+                var num = 15;
+
+                oBtn1.onclick = function (ev2) {
+                    num --;
+                    oP.style.fontSize = num + 'px';
+                };
+
+                oBtn2.onclick = function (ev2) {
+                    num ++;
+                    oP.style.fontSize = num + 'px';
+                };
+
+                oBtn3.onclick = function (ev2) {
+                    /*oP.style.width = '300px';
+                    oP.style.background = 'yellow';
+                    oP.style.padding = '20px';
+                    oP.style.color = 'red';
+                    oP.style.border = '10px solid #dddddd';*/
+
+                    // class 保留字 关键字 var  function
+                    // class => className
+
+                    oP.className = 'yellow';
+                };
+
+                oBtn4.onclick = function (ev2) {
+                    oP.className = 'red';
+                };
+            };
+        </script>
+        <style>
+            .yellow{
+                width: 300px;
+                background-color: yellow;
+                padding: 20px;
+                color: red;
+                border: 10px solid #dddddd;
+            }
+            .red{
+                width: 500px;
+                background-color: red;
+                padding: 30px;
+                color: yellow;
+                border: 10px solid #dddddd;
+            }
+        </style>
+    </head>
+    <body>
+        <input id="btn1" type="button" value="-">
+        <input id="btn2" type="button" value="+">
+        <input id="yellow" type="button" value="黄">
+        <input id="red" type="button" value="红">
+        <p id="p1">
+            2月28日24时，国内成品油价格调价窗口开启。
+            据国家发改委通知，本次油价调整具体情况如下：每吨汽油下调190元、柴油下调185元。90号汽油每升下调0.14元，92号汽油每升下调0.15元 ，95号汽油每升下调0.16元，0号柴油每升下调0.16元。按一般家用汽车油箱50L容量估测，加满一箱92号汽油将节省约7.5元。
+            本次调价落地后，是自2017年7月以来，成品油下调的最大幅度，也是2018年年内首次“二连跌”。进入2018年以来，国内成品油价格已历经4轮调整，形成了“两涨两跌零搁浅”的格局。
+            卓创资讯成品油分析师郑亚明认为，在本轮计价周期内，国际原油呈现先跌后涨走势。上涨主要得益于美元汇率走低、美国原油库存下降，并且中东局势不稳使业者对原油供应中断产生担忧，致使欧美原油价格连续上涨。但变化率仍处负值范围运行。
+        </p>
+    </body>
+</html>

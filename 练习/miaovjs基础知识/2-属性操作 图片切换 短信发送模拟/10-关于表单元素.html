@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <input id="input1" type="button">
+
+        <script>
+            var oInput = document.getElementById('input1');
+
+            oInput.onclick = function (ev) {
+                oInput.type = 'checkbox';
+
+                // ie6 ie7 ie8 不支持 会报错！！！
+            };
+
+        </script>
+    </body>
+</html>
