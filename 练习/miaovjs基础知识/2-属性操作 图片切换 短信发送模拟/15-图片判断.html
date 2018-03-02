@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            window.onload = function (ev) {
+                var oImg = document.getElementById('img1');
+                var onOff = true;
+                // 创造一个开关 ：布尔值  true-真-1  false-假-0
+                oImg.onclick = function (ev2) {
+                    if (onOff){
+                        oImg.src = '../image/2.jpg';
+                        onOff = false;
+                    }else {
+                        oImg.src = '../image/1.jpg';
+                        onOff = true;
+                    }
+
+
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <img id="img1" src="../image/1.jpg" alt="">
+
+    </body>
+</html>

@@ -28,24 +28,21 @@
                 // innerHTML 的值别拿来做判断!!!
 
                 /*
-                    oDiv.style.float = 'left';
+                技术上 ：必须能做到掌握兼容性(兼容性的解决方案)！！！
+                需求上 : 商量着来(提供最准确的呈现方案)
 
-                    oDiv.style.styleFloat = 'left';
-                    oDiv.style.cssFloat = 'left';
+                绕着点，下面的方法所有的浏览器都兼容！！！
+                oDiv.style.float = 'left';
 
-                    ie( styleFloat)
-                    非ie (cssFloat)
+                oDiv.style.styleFloat = 'left';
+                oDiv.style.cssFloat = 'left';
+                一个兼容ie67 一个兼容其他浏览器
+                IE (styleFloat) 非IE(cssFloat)
 
-                    .fl{float:left;}
-                    .fr{float:right;}
-
-                    <div class='right'></div>
-
-                   以上方法没必要！记录一下而已！
-
-                   技术上：必须能做到掌握兼容性（兼容性问题的解决方案）
-                   需求上：提供最准确的呈现方案
-                */
+                    .left{ float:left; }
+                    .right{ float:right; }
+                <div class='right'></div>
+            */
             };
         </script>
     </body>
