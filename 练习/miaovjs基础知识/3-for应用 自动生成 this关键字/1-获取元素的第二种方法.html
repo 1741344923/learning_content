@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <!--
+        #list {}  静态方法 前面只能跟document 不能跟其他元素。
+        var oUl = document.getElementById('list');
+
+        li {}     动态方法 除了可以跟document 还可以跟其他元素
+        document.getElementsByClassName('li');
+
+        #list li{}
+        var aLi = oUl.getElementsByTagName('li');
+
+        //aLi => [li,li,li] 元素的集合
+
+        aLi.length;    3
+
+        aLi[0]
+
+        在用TagName的时候,必须要加上[];
+    -->
+    <script>
+        window.addEventListener('load',function (ev) {
+            //var oUl = document.getElementById('list');
+
+            var oUl = document.getElementsByTagName('ul')[0];
+            var aLi = oUl.getElementsByTagName('li');
+
+            // 找到的是页面上所有的li
+            document.getElementsByTagName('li');
+
+            alert( aLi.length ); // 3
+
+        })
+    </script>
+    <body>
+        <ul id="list">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ol>
+            <li></li>
+            <li></li>
+        </ol>
+    </body>
+</html>

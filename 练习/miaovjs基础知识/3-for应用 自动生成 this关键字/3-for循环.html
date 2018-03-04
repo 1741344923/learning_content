@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            li{
+                height: 30px;
+                border: 1px solid red;
+            }
+        </style>
+        <!--
+            循环  重复执行某些代码 每次执行的时候，有个数字在变化！！！
+
+                1、var i =0;
+                2、i<3 关键！！！
+                3、括号里面的所有代码
+                4、i ++
+
+
+                i=0;
+                for ( ;i<3;){
+                    alert(1);
+                    i ++;
+                }*/
+
+                /*for (var i=0;i<3;i++){
+                    //alert(i);
+                }
+                alert(i) //3
+
+                循环  重复执行某些代码 每次执行的时候，有个数字在变化！！！
+        -->
+        <script>
+            window.addEventListener('load',function (ev) {
+                var oUl = document.getElementById('list');
+                var aLi = oUl.getElementsByTagName('li');
+
+                aLi[0].onclick = function () {
+                    alert(1);
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <ul id="list">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </body>
+</html>

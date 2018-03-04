@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            window.addEventListener('load',function (ev) {
+                //document.title = 123;
+                //document.body.innerHTML = 'abc';
+
+                // 找到的是一堆元素的集合getElementsByTagName
+                var aBtn = document.getElementsByTagName('input');
+                //alert( aBtn.length );
+
+                document.body.innerHTML = '<input type="button" value="按钮"/><input type="button" value="按钮"/><input type="button" value="按钮"/>';
+
+                //alert( aBtn.length );
+
+                aBtn[0].onclick = function () {
+                    alert(1);
+                };
+                aBtn[1].onclick = function () {
+                    alert(1);
+                };
+                aBtn[2].onclick = function () {
+                    alert(1);
+                };
+
+                // 循环  重复执行某些代码 每次执行的时候，有个数字在变化！！！
+            });
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

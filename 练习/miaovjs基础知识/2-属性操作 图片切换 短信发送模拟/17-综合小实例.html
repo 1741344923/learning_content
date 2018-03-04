@@ -56,8 +56,47 @@
         </style>
     </head>
     <script>
+        // querySelector选择器：选中某个 扩号里面和写css一样要带 # 号
+        // querySelectorAll 选中一组 使用循环 找到某个后面使用[]
         window.addEventListener('load',function (ev) {
-            var oPrev = document.querySelector()
+            var oPrev = document.querySelector('#prev');
+            var  oNext = document.querySelector('#next');
+            var oText  = document.querySelector('#text');
+            var oSpan = document.querySelector('#span1');
+            var oImg = document.querySelector('#img1');
+
+
+            var arrUrl = ['../image/1.jpg','../image/2.jpg/','../image/3.jpg','../image/4.jpg'];
+            var arrText = ['第一张','第二张','第三张','第四张'];
+
+            var  num = 0;
+
+            // 初始化
+            function fnTab() {
+                oSpan.innerHTML = num + 1 +'/'+arrText.length;
+                oImg.src = arrUrl[num];
+                oText.innerHTML = arrText[num];
+            }
+
+            fnTab();
+
+            oPrev.onclick = function () {
+                num --;
+                if ( num == -1 ){
+                    num = arrText.length-1;
+                }
+                fnTab();
+            };
+
+            oNext.onclick = function () {
+                num ++;
+                if ( num == arrText.length ){
+                    num = 0;
+                }
+
+                fnTab();
+            }
+
         });
     </script>
     <body>

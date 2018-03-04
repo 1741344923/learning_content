@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            #header{
+                width: 600px;
+                height: 400px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            #div1{
+                width: 600px;
+                height: 355px;
+                position: relative;
+            }
+            #prev,
+            #next{
+                width: 40px;
+                height: 40px;
+                display: block;
+                background: rgba(0,0,0,0.5);
+                text-align: center;
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 30px;
+                position: absolute;
+                top: 50%;
+                margin-top: -20px;
+            }
+            #prev{
+                left: 10px;
+            }
+            #next{
+                right: 10px;
+            }
+            #span1,
+            #p1{
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                background: rgba(0,0,0,0.5);
+                text-align: center;
+                color: #ffffff;
+            }
+            #span1{
+                top: 0;
+            }
+            #p1{
+                margin: 0;
+                bottom: 0;
+            }
+            #img1{
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+
+        <script>
+            window.addEventListener('load',function () {
+                var oBtn1 = document.querySelector('#btn1');
+                var oBtn2 = document.querySelector('#btn2');
+
+                var arrText = [
+                    '../image/1.jpg',
+                    '../image/2.jpg',
+                    '../image/3.jpg',
+                    '../image/4.jpg'
+                ];
+
+                var arrUl = [
+                    '第一张',
+                    '第二张',
+                    '第三张',
+                    '第四张'
+                ];
+
+                oBtn1.onclick = function () {
+                    
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <input id="btn1" type="button" value="循环切换">
+            <input id="btn2" type="button" value="顺序切换">
+            <div>图片只能到最后一张或只能到第一张切图</div>
+            <div id="div1">
+                <a href="" id="prev"><</a>
+                <a href="" id="next">></a>
+                <span id="span1">图片正在加载中......</span>
+                <p id="p1">文字正在加载中......</p>
+                <img id="img1" src="../image/2.jpg" alt="">
+            </div>
+        </div>
+    </body>
+</html>
