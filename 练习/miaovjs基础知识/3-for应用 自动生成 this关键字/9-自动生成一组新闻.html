@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            window.addEventListener('load',function (ev) {
+                var oBtn = document.getElementById('btn1');
+                var oUl = document.getElementById('ul1');
+
+                var arr = [
+                    '外交部回应美军:世界头号军事强国竟说别...  光明网',
+                    '1天前 锐读丨军事网站如何走出同质化困境  新浪新闻',
+                    '22小时前 中国军网 - 中国人民解放军官方军事新闻...  中国军网',
+                    '2月4日 军事新闻  中国新闻网',
+                    '...届全国人大一次会议的解放军和武警部队代表团组成 _军事要闻 _...'
+                ];
+
+                /*思路：
+                    1、找按钮的麻烦 (用户体验不太好)
+                    2、先清空，在生成
+                    3、判断
+                */
+                var len = arr.length;
+
+                var onOff = true;
+
+                oBtn.onclick = function (ev2) {
+
+                    //oBtn.disabled = true;
+                    //oBtn.style.display = 'none';
+                    //oUl.innerHTML = '';
+
+
+                    if ( onOff ){
+
+                        onOff = false;   //ok
+
+                        for ( var i=0;i<len;i++ ){
+                            oUl.innerHTML += '<li>'+arr[i]+'</li>';
+                        }
+                        //onOff = false;    ok
+                    }
+                    onOff = false; // ok
+                }
+
+            })
+
+
+        </script>
+    </head>
+    <body>
+        <input id="btn1" type="button" value="自动生成5条新闻">
+        <ul id="ul1">
+
+        </ul>
+    </body>
+</html>

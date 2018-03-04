@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            window.addEventListener('load',function (ev) {
+                var aBtn = document.getElementsByTagName('input');
+                var aP = document.getElementsByTagName('p');
+
+                // 想建立 匹配 对应 关系，就用索引值
+
+                var arr = ['默默','张三','李四'];
+
+                for ( var i=0;i<aBtn.length;i++ ){
+
+                    aBtn[i].index = i;  // 自定义属性(索引值)
+
+                    aBtn[i].onclick = function () {
+                        //alert( arr[this.index] );
+
+                        this.value = arr[this.index];
+
+                        aP[this.index].innerHTML = arr[this.index];
+                    }
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <input type="button" value="btn1"/>
+        <input type="button" value="btn2"/>
+        <input type="button" value="btn3"/>
+        <p>a</p>
+        <p>b</p>
+        <p>c</p>
+    </body>
+</html>

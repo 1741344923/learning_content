@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            var arr = [
+                [1,2,3],
+                [4,5,6],
+                [7,8,9]
+            ];
+
+            arr[0][0] // 123里面的1
+            arr[0][2] // 2
+
+            for ( var i=0;i<arr.length;i++ ){
+                /*arr[0]
+                arr[1]
+                arr[2]*/
+
+                for ( var j=0;j<arr[i].length;j++ ){
+
+                    //alert( arr[i][j] ); // 找到数组里面的每一个
+                }
+            }
+
+
+            //下面并列的情况下可以都写成i 如果是for套for的情况下 建议换个名字 j
+            //for ( var i=0;i<arr.length;i++ ){}
+            //for ( var i=0;i<arr.length;i++ ){}
+
+            window.addEventListener('load',function (ev) {
+                var oUl = document.getElementById('ul1');
+                var aUi = oUl.getElementsByTagName('ul');
+                var len = aUi.length;
+                var aLi = null;  // 空
+
+                for ( var i=0;i<len;i++ ){
+                   aLi = aUi[i].getElementsByTagName('li');
+
+                   for ( var j=0;j<aLi.length;j++ ){
+                       aLi[j].style.background = 'red';
+                   }
+                }
+            });
+        </script>
+
+        <ul id="ul1">
+            <li>
+                <h2>我的好友</h2>
+                <ul>
+                    <li>小李</li>
+                    <li>小张</li>
+                </ul>
+            </li>
+            <li>
+                <ol>
+                    <li>on</li>
+                    <li>on</li>
+                    <li>on</li>
+                </ol>
+            </li>
+            <li>
+                <h2>我的坏友</h2>
+                <ul>
+                    <li>小李子</li>
+                    <li>小张</li>
+                    <li>小张</li>
+                </ul>
+            </li>
+            <li>
+                <ol>
+                    <li>on</li>
+                    <li>on</li>
+                    <li>on</li>
+                </ol>
+            </li>
+            <li>
+                <h2>我的黑名单</h2>
+                <ul>
+                    <li>小李</li>
+                    <li>小张</li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

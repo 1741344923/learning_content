@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            ul, h2 {
+                padding: 0;
+                margin: 0;
+            }
+
+            li {
+                list-style: none;
+            }
+
+            #ul1 {
+                width: 240px;
+                border: 1px solid #aaaaaa;
+                margin: 0 auto;
+            }
+
+            #ul1 h2 {
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                background: url(../image/9.png) no-repeat -4px center;
+            }
+
+            #ul1 .active {
+                background: url(../image/10.png) no-repeat -4px center;
+            }
+
+            #ul1 ul {
+                display: none;
+            }
+
+            #ul1 ul li {
+                line-height: 24px;
+                border-bottom: 1px solid #aaaaaa;
+                text-indent: 30px;
+            }
+            #ul1 ul .hover {
+                background: red;
+            }
+        </style>
+        <script>
+            window.addEventListener('load', function (ev) {
+                var oUl = document.getElementById('ul1');
+                var aH2 = oUl.getElementsByTagName('h2');
+                var aUl = oUl.getElementsByTagName('ul');
+                var aLi = null;
+                var arrLi = [];
+
+                for ( var i=0;i<aH2.length;i++ ){
+                    aH2[i].index = i;
+                    aH2[i].onclick = function (ev2) {
+                        if ( this.className == ''){
+                            aUl[this.index].style.display = 'block';
+                            this.className = 'active';
+                        }else {
+                            aUl[this.index].style.display = 'none';
+                            this.className = '';
+                        }
+
+                    }
+                }
+
+
+                for ( var i=0;i<aUl.length;i++ ){
+                    aLi = aUl[i].getElementsByTagName('li');
+                    for ( var j=0;i<aLi.length;j++ ){
+                        arrLi.push( aLi[j] );
+                    }
+                }
+
+
+                for ( var i=0;i<arr.length;i++ ){
+                    arrLi[i].onclick = function () {
+                        this.className = 'hover';
+                    }
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <ul id="ul1">
+            <li class="li1">
+                <h2>我的好友</h2>
+                <ul>
+                    <li>张三</li>
+                    <li>张三</li>
+                    <li>张三</li>
+                    <li>张三</li>
+                    <li>张三</li>
+                </ul>
+            </li>
+            <li>
+                <h2>企业好友</h2>
+                <ul>
+                    <li>张小三</li>
+                    <li>张小三</li>
+                    <li>张小三</li>
+                    <li>张小三</li>
+                    <li>张小三</li>
+                </ul>
+            </li>
+            <li>
+                <h2>我的黑名单</h2>
+                <ul>
+                    <li>李四</li>
+                    <li>李四</li>
+                    <li>李四</li>
+                    <li>李四</li>
+                    <li>李四</li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

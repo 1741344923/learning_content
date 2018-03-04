@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+
+            /*alert(this); window
+
+            fn1(this);
+            function fn1(obj) {
+                obj =>window
+            }
+
+            oDiv.onclick = function () {
+                this
+                fn1(this);
+            };
+            function fn1(obj) {
+                obj => oDiv
+            }*/
+
+            window.addEventListener('load',function (ev) {
+                var aBtn = document.getElementsByTagName('input');
+                var that = null; // 空
+
+                for ( var i=0;i<aBtn.length;i++ ){
+                    /*aBtn[i].onclick = function () {
+                        //this.style.background = 'yellow';
+
+                        that = this;
+
+                        fn1();
+                    };*/
+
+                    aBtn[i].onclick = fn1;
+                }
+
+                function fn1() {
+                    //this = >window
+                    //that.style.background = 'yellow';
+
+                   this.style.background = 'red';
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <input type="button" value="按钮1"/>
+        <input type="button" value="按钮2"/>
+        <input type="button" value="按钮3"/>
+
+    </body>
+</html>

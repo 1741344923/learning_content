@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            li{
+                list-style: none;
+                width: 140px;
+                height: 160px;
+                background: url(../image/normal.png);
+                float: left;
+                margin-right: 20px;
+            }
+        </style>
+
+        <script>
+            window.addEventListener('load',function (ev) {
+                var aLi = document.getElementsByTagName('li');
+                //var onOff = true; // 只能控制一组！！！
+
+                for ( var i=0;i<aLi.length;i++ ){
+
+                    aLi[i].onOff = true;
+                    aLi[i].onclick = function () {
+
+                        //alert( this.style.background );
+                        // 背景不能判断
+                        // color red #f00
+                        // 相对路径
+
+
+                        if ( this.onOff ){
+                            this.style.background = 'url(../image/active.png)';
+                            this.onOff = false;
+                        }else {
+                            this.style.background = 'url(../image/normal.png)';
+                            this.onOff = true;
+                        }
+                    }
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </body>
+</html>
