@@ -19,15 +19,19 @@
                 margin: 0 auto;
             }
 
+            #ul1 .li1 {
+                border-bottom: 1px solid #aaaaaa;
+            }
+
             #ul1 h2 {
                 height: 30px;
                 line-height: 30px;
                 text-align: center;
-                background: url(../image/9.png) no-repeat -4px center;
+                background: pink url(../image/9.png) no-repeat -4px center;
             }
 
             #ul1 .active {
-                background: url(../image/10.png) no-repeat -4px center;
+                background: red url(../image/10.png) no-repeat -4px center;
             }
 
             #ul1 ul {
@@ -39,8 +43,9 @@
                 border-bottom: 1px solid #aaaaaa;
                 text-indent: 30px;
             }
+
             #ul1 ul .hover {
-                background: red;
+                background: yellow;
             }
         </style>
         <script>
@@ -51,31 +56,35 @@
                 var aLi = null;
                 var arrLi = [];
 
-                for ( var i=0;i<aH2.length;i++ ){
+                for (var i = 0; i < aH2.length; i++) {
                     aH2[i].index = i;
                     aH2[i].onclick = function (ev2) {
-                        if ( this.className == ''){
+                        if (this.className == '') {
                             aUl[this.index].style.display = 'block';
                             this.className = 'active';
-                        }else {
+                        } else {
                             aUl[this.index].style.display = 'none';
                             this.className = '';
                         }
-
                     }
                 }
 
 
-                for ( var i=0;i<aUl.length;i++ ){
+                for (var i = 0; i < aUl.length; i++) {
                     aLi = aUl[i].getElementsByTagName('li');
-                    for ( var j=0;i<aLi.length;j++ ){
-                        arrLi.push( aLi[j] );
+                    for (var j = 0; j < aLi.length; j++) {
+                        arrLi.push(aLi[j]);
                     }
                 }
 
 
-                for ( var i=0;i<arr.length;i++ ){
+                for (var i = 0; i < arrLi.length; i++) {
                     arrLi[i].onclick = function () {
+
+                        for (var i = 0; i < arr.length; i++) {
+                            arrLi[i].className = '';
+                        }
+
                         this.className = 'hover';
                     }
                 }
@@ -94,7 +103,7 @@
                     <li>张三</li>
                 </ul>
             </li>
-            <li>
+            <li class="li1">
                 <h2>企业好友</h2>
                 <ul>
                     <li>张小三</li>
@@ -104,7 +113,7 @@
                     <li>张小三</li>
                 </ul>
             </li>
-            <li>
+            <li class="li1">
                 <h2>我的黑名单</h2>
                 <ul>
                     <li>李四</li>
