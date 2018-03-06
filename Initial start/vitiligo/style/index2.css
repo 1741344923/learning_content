@@ -1,0 +1,596 @@
+/*--------------头部-----------*/
+.logo{
+    height: 1.765625rem;
+    background: url(../images/logo.png) no-repeat left top;
+    background-size:100% 100%;
+}
+/*--------------简介------------*/
+.brief{
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+.brief dl{
+    float: left;
+    width: 2.5rem;
+    height: 2.3125rem;
+    text-align: center;
+    border-right: 1px solid #cccccc;
+    box-sizing: border-box;
+    background-color: white;
+    color: #666666;
+    font-size: 0.4375rem;
+}
+.brief dl.Ls{
+    border-right: none;
+}
+.brief dl.on{
+    background-color: #f5f5f5;
+}
+.brief dl dt img{
+    width: 1.09375rem;
+    height: 1.09375rem;
+    margin-top: 0.296875rem;
+    margin-bottom: 0.046875rem;
+}
+.brief dl dd{
+    height: 0.875rem;
+    line-height: 0.875rem;
+}
+/*-------------------头部下面的背景部分------------------*/
+.Type img{
+    width: 10rem;
+    height: 4.734375rem;
+}
+/*-----------=白癜风种类-------------*/
+.Vi{
+    margin-top: 0.28125rem;
+    margin-left: 0.109375rem;
+}
+.Vi dl{
+    float: left;
+    width: 2.90625rem;
+    height: 1.421875rem;
+    border: 1px solid #cccccc;
+    font-size: 0.4375rem;
+    color: #0066cc;
+    margin-bottom: 0.25rem;
+    margin-right: 0.421875rem;
+}
+.Vi dl.mr{
+    margin-right: 0;
+}
+.Vi dl dt{
+    width: 1.421875rem;
+    height: 1.421875rem;
+    float: left;
+}
+.Vi dl dt img{
+    width: 1.296875rem;
+    height: 1.296875rem;
+    margin: 0.0625rem;
+}
+.Vi dl dd{
+    float: left;
+    width: 1.453125rem;
+    height: 1.1875rem;
+    line-height: 0.484375rem;
+    padding-top: 0.234375rem;
+    margin-left: 0.03125rem;
+}
+.Vi dl dd span{
+    width: 80%;
+    text-align: center;
+}
+/*---------------不同类型采用针对疗法---------------------*/
+.Epidermis{
+    margin-left: 0.15625rem;
+    margin-top: 0.6153846153846154rem;
+}
+.Epidermis dl{
+    width: 9.6875rem;
+    height: 3.984375rem;
+    background-color: #f1f1f1;
+    margin-bottom: 0.296875rem;
+}
+.Epidermis dl.Painless{
+    margin-bottom: 0;
+}
+.Epidermis dl dt{
+    float: left;
+    position: relative;
+}
+.Epidermis dl dt img{
+    width: 3.75rem;
+    height: 3.984375rem;
+}
+.Epidermis dl dt div{
+    width: 1.40625rem;
+    height: 1.40625rem;
+    background: rgba(243,163,7,0.8);
+    border-radius: 50%;
+    font-size: 0.375rem;
+    text-align: center;
+    line-height: 0.28125rem;
+    color: white;
+    position: absolute;
+    left: 0.296875rem;
+    bottom: 0.46875rem;
+}
+.Epidermis dl dt div span{
+    margin-top: 0.328125rem;
+    line-height:0.375rem;
+}
+.Epidermis dl dd{
+    float: left;
+    width: 5.9375rem;
+    height: 3.984375rem;
+    font-size: 0.375rem;
+    color: #666666;
+}
+.Epidermis dl dd h2{
+    height: 1.09375rem;
+    line-height: 0.921875rem;
+    font-size: 0.5rem;
+    color: white;
+    background-color: #0066cc;
+    font-weight: bolder;
+}
+.Epidermis dl dd h2 span{
+    width: 1.09375rem;
+    height: 1.09375rem;
+    background-color: #004d9a;
+    margin-right: 0.390625rem;
+    text-align: center;
+}
+.Epidermis dl dd p{
+    height: 2.75rem;
+    line-height: 0.6875rem;
+    padding: 0.140625rem 0.359375rem 0 0.3125rem;
+}
+/*---------------------------治疗效果对比-------------------*/
+.Before{
+    margin-top: 0.453125rem;
+    margin-bottom: 0.609375rem;
+}
+.Before ul{
+    width: 4.59375rem;
+}
+.Before ul.mr{
+    margin-right: 0.46875rem;
+    margin-left: 0.15625rem;
+}
+.Before ul li{
+    float: left;
+    width: 2.296875rem;
+    height: 2.46875rem;
+    position: relative;
+}
+.Before ul li img{
+    width: 2.296875rem;
+    height: 2.46875rem;
+    background-size: 100% 100%;
+}
+.Before ul li em{
+    color: white;
+    text-align: center;
+    width: 98%;
+    height: 0.421875rem;
+    font-size: 0.375rem;
+    line-height: 0.421875rem;
+    background-color: #668db0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+/*------------------------------治疗白癜风医生介绍----------------------------*/
+.introduce{
+    margin-top: 0.625rem;
+    height: 6.296875rem;
+    overflow: hidden;
+    position: relative;
+}
+.tm{
+    width: 46.875rem;
+    height: 6.296875rem;
+}
+.tm dl{
+    float: left;
+    width: 10rem;
+    height: 6.296875rem;
+    border: 1px solid #cecece;
+    box-sizing: border-box;
+}
+.tm dl dt{
+    float: left;
+    width: 4.609375rem;
+    height: 6.265625rem;
+}
+.tm dl dt img{
+    height: 100%;
+    width: 4.609375rem;
+}
+.tm dl dd{
+    float: left;
+    width: 4.59375rem;
+    height: 6.265625rem;
+    padding-left: 0.15625rem;
+    padding-right: 0.15625rem;
+}
+.tm dl dd h2{
+    color: #003fa8;
+    font-size: 0.71875rem;
+    text-align: center;
+    font-weight: bolder;
+}
+.tm dl dd h3{
+    height: 0.84375rem;
+    line-height:0.84375rem;
+    text-align: center;
+    font-size: 0.46875rem;
+}
+.tm dl dd p{
+    font-size: 0.375rem;
+    line-height: 0.625rem;
+}
+.tm dl dd p i{
+    width: 0.3125rem;
+    height: 0.3125rem;
+    background-color: #0066cc;
+    border-radius: 50%;
+    margin-right: 0.15625rem;
+}
+.tm dl dd p span{
+    color: #0066cc;
+    margin-right: 0.078125rem;
+}
+.introduce a{
+    height: 1.34375rem;
+    width: 0.703125rem;
+    background:rgba(153,153,153,0.5);
+    position: absolute;
+    top: 2.09375rem;
+    color: white;
+    font-size: 0.9375rem;
+}
+.introduce a.lf{
+    left: 0.1875rem;
+}
+.introduce a.rg{
+    right: 0.265625rem;
+}
+/*------------------更多治疗效果展示--------------------*/
+.Exhibition{
+    margin-left: 0.15625rem;
+}
+.Exhibition dl{
+    float: left;
+    width: 3.125rem;
+    height: 3.09375rem;
+    position: relative;
+    margin-right: 0.15625rem;
+}
+.Exhibition dl dt img{
+    width: 3.125rem;
+    height: 3.09375rem;
+}
+.Exhibition dl dd{
+    position: absolute;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height:0.78125rem;
+    color: white;
+    text-align: center;
+    line-height: 0.78125rem;
+    background: rgba(0,102,204,0.7);
+    font-size: 0.375rem;
+}
+.Exhibition ul {
+    margin-left: 0.15625rem;
+    margin-right: 0.3125rem;
+    border-bottom: 1px dashed #cccccc;
+}
+.Exhibition ul li{
+    float: left;
+    height: 0.765625rem;
+    line-height:0.765625rem;
+    font-size: 0.375rem;
+}
+.Exhibition ul li.Eb{
+    color: #1264b7;
+    margin: 0 0.15625rem;
+    font-weight: bolder;
+}
+.Exhibition p{
+    height: 0.9375rem;
+    line-height: 0.46875rem;
+    padding: 0.234375rem 0;
+    border-bottom: 1px dashed #cccccc;
+    margin-left: 0.15625rem;
+    margin-right: 0.3125rem;
+}
+.Exhibition p.on{
+    border-bottom: none;
+}
+.Exhibition p span{
+    color: #1264b7;
+    margin: 0 0.15625rem;
+    font-weight: bolder;
+}
+/*---------------治疗设备----------------*/
+.Secret dl{
+    height: 4.5625rem;
+    font-size: 0.375rem;
+    color: #999999;
+}
+.Secret dl dt{
+    width: 5.5rem;
+    height: 4.5625rem;
+    float: left;
+}
+.Secret dl dt img{
+    width: 5rem;
+    height: 4.203125rem;
+    margin-top: 0.359375rem;
+    margin-left: 0.234375rem;
+}
+.Secret dl dd{
+    float: left;
+    width: 4.5rem;
+    height: 4.5625rem;
+}
+.Secret dl dd p{
+    margin-top: 0.53125rem;
+    line-height: 0.59375rem;
+}
+.Secret dl dd a img{
+    width: 3.1875rem;
+    height: 0.65625rem;
+    margin-top: 0.625rem;
+}
+/*--------------------------查看更多设备-------------------*/
+.See ul{
+    margin-left:0.125rem;
+}
+.See ul li{
+    float: left;
+    width: 2.171875rem;
+    height: 2.75rem;
+    border: 1px solid #cccccc;
+    background-color: white;
+    margin-right: 0.28125rem;
+}
+.See ul li img{
+    width: 2.171875rem;
+    height: 2.75rem;
+}
+.See ul li.on{
+    text-align: center;
+    background-color: #f6f7f7;
+    font-size: 0.375rem;
+    margin-right: 0;
+}
+.See ul li a{
+    width: 100%;
+    height: 2rem;
+    margin-top: 0.75rem;
+}
+/*--------------------挂号网----------------------*/
+.Register{
+    width: 10rem;
+    height: 0.9375rem;
+    background: url(../images/Registered.png) no-repeat center center;
+    background-size: 100%;
+}
+.response{
+    height: 1.34375rem;
+    line-height: 1.34375rem;
+    color: #666666;
+    font-size: 0.375rem;
+    text-align: center;
+    margin-bottom: 0.078125rem;
+}
+.policy{
+    font-size: 0.375rem;
+}
+.policy ul li{
+    color: #666666;
+    height: 0.703125rem;
+    margin-bottom: 0.46875rem;
+}
+.policy ul li em{
+    width: 2.328125rem;
+    height: 0.703125rem;
+    line-height: 0.703125rem;
+    text-align: right;
+}
+.policy ul li i{
+    margin: 0 0.21875rem;
+}
+.policy ul li span{
+    margin-left: 1.1875rem;
+}
+.policy ul li input.on{
+    width: 7.015625rem;
+    height: 0.671875rem;
+    border: 1px solid #d6d6d6;
+    padding-left: 0.203125rem;
+}
+.policy ul li input.Age{
+    width: 2.265625rem;
+    height: 0.671875rem;
+    border: 1px solid #d6d6d6;
+    padding-left: 0.265625rem;
+}
+.disease em{
+    height: 1.953125rem;
+}
+
+.policy ul li.disease{
+    height: 1.96875rem;
+    margin-bottom: 0;
+    height: auto;
+}
+.policy ul li.disease em{
+    height: 100%;
+    vertical-align: middle;
+}
+.policy ul li.disease textarea{
+    height: 1.921875rem;
+
+}
+.policy a{
+    width: 3.5625rem;
+    height: 0.890625rem;
+    background-color: #ff9900;
+    color: white;
+    text-align: center;
+    line-height: 0.890625rem;
+    font-size: 0.46875rem;
+    margin: 0.484375rem 3.265625rem 0.453125rem 3.171875rem;
+}
+.policy div{
+    height: 1.1875rem;
+    line-height: 0.59375rem;
+    margin-left: 0.234375rem;
+    margin-right: 0.390625rem;
+}
+.policy div span{
+    color: #f20000;
+}
+
+textarea{
+    width: 7.21875rem;
+    height: 1.921875rem;
+    vertical-align: top;
+    border: 1px solid #d6d6d6;
+    outline: none;
+}
+/*--------------------------底部---------------------*/
+.Cross img{
+    width: 100%;
+}
+.footer{
+    color: white;
+    width: 100%;
+    height: 2.75rem;
+    position: relative;
+    background-color: #666666;
+    font-size: 0.390625rem;
+    text-align: center;
+    line-height: 0.765625rem;
+    padding-top: 0.21875rem;
+}
+
+.footer em{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.footer em img{
+    width: 1.40625rem;
+    height: 1.421875rem;
+    background: url(../images/footer.png) no-repeat left top;
+}
+.Telephone a{
+    width: 50%;
+    height: 1.71875rem;
+    color: white;
+    font-size: 0.546875rem;
+    line-height: 1.71875rem;
+}
+.Telephone a.b{
+    float: left;
+    background-color: #029829;
+}
+.Telephone a.b img{
+    width: 0.71875rem;
+    height: 0.859375rem;
+    margin: 0.46875rem 0.390625rem 0.40625rem 1rem;
+}
+.Telephone a.c{
+    float: left;
+    background-color: #f97400;
+}
+.Telephone a.c img{
+    width: 0.890625rem;
+    height: 0.828125rem;
+    margin: 0.375rem 0.375rem 0.484375rem 0.640625rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    /*通用的样式*/
+.moWidth{
+    width: 10rem;
+    margin: 0 auto;
+}
+.mb13{
+    margin-bottom: 0.203125rem;
+}
+.mb17{
+    margin-bottom: 0.265625rem;
+}
+.mb23{
+    margin-bottom:0.359375rem;
+}
+.mb40{
+    margin-bottom: 0.625rem;
+}
+.mb57{
+    margin-bottom: 0.890625rem;
+}
+.mb60{
+    margin-bottom: 0.9375rem;
+}
+.mb80{
+    margin-bottom: 1.25rem;
+}
+.mb30{
+    margin-bottom: 0.46875rem;
+}
+.mb38{
+    margin-bottom: 0.59375rem;
+}
+.mb47{
+    margin-bottom: 0.734375rem;
+}
+/*-----通用的部分*/
+.General{
+    width: 10rem;
+    height: 0.9375rem;
+    background-color: #1364b6;
+    font-size: 0.46875rem;
+    color: white;
+    text-align: center;
+    line-height: 0.9375rem;
+}
+/*-------预约通用---------*/
+.call{
+    text-align: center;
+}
+.call a{
+    width: 3.5rem;
+    height: 0.9375rem;
+}
+.call .Dial{
+    background: url(../images/dial.png) no-repeat left top;
+    background-size: 100% 100%;
+    margin-right: 0.3125rem;
+}
+.call .Dial-last{
+    background: url(../images/dial1.png) no-repeat left top;
+    background-size: 100% 100%;
+}
+
+
+

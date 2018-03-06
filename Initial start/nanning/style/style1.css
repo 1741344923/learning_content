@@ -1,0 +1,749 @@
+/*通用的样式*/
+.moWidth{
+    width: 1002px;
+    margin: 0 auto;
+}
+a.Gengduo{
+    color: #fff;
+    float: right;
+    width: 48px;
+    height: 18px;
+    background-color: #a4a4a4;
+    line-height: 18px;
+    text-align: center;
+    margin-right: 9px;
+    margin-top: 9px;
+    border: 1px solid #818181;
+}
+.al{
+    color: #fff;
+    float: left;
+    text-align: center;
+    width: 79px;
+    height: 35px;
+    background-color: #006699;
+    line-height: 35px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.mb{
+    margin-bottom: 6px;
+}
+.mb26{
+    margin-bottom: 26px;
+}
+.mb28{
+    margin-bottom: 28px;
+}
+.mr12{
+    margin-right: 12px;
+}
+.mr11{
+    margin-right: 11px;
+}
+.mb16{
+    margin-bottom: 16px;
+}
+.mt22{
+    margin-top: 22px;
+}
+.mb24{
+    margin-bottom: 24px;
+}
+.mb38{
+    margin-bottom: 38px;
+}
+/*------------------顶部--------------*/
+.headerBox{
+    height: 33px;
+    background-color: #ededed;
+    border-bottom: 1px solid #cccccc;
+}
+.Box-left{
+    height: 33px;
+    line-height: 33px;
+    padding-left: 7px;
+    font-size: 12px;
+    color: #666666;
+}
+.Box-left a .Telephone{
+    margin-left: 20px;
+}
+.Box-left a .Tp{
+    font-weight: bolder;
+}
+.Box-right{
+    padding-right: 2px;
+    color: #666666;
+}
+.Box-right ul li{
+    float: left;
+    width: 65px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    position: relative;
+}
+.Box-right ul li a{
+    width: 100%;
+}
+.Box-right ul li em{
+    width: 1px;
+    height: 12px;
+    background-color: #666666;
+    position: absolute;
+    right: 0;
+    top: 11px;
+}
+/*--------logo------------*/
+.logo{
+    width: 100%;
+    height: 106px;
+    background-color: #fff;
+}
+/*-----------导航条----------*/
+.nav{
+    width: 100%;
+    height: 44px;
+    background-color: #0066cc;
+}
+.nav ul{
+    margin: 0 2px;
+}
+.nav ul li{
+    float: left;
+    color: #fff;
+    width: 110px;
+    line-height: 44px;
+    text-align: center;
+    border-right: 1px solid #006699;
+    font-size: 14px;
+}
+.nav ul li:hover{
+    background-color: #004e9e;
+}
+.nav ul li.bn{
+    border-right: none;
+}
+.nav ul li a{
+    width: 100%;
+}
+/*----------大背景----------*/
+.Big_bkg{
+    position: relative;
+    margin-bottom: 13px;
+}
+.Big_bkg .hd{
+    overflow: hidden;
+}
+.Big_bkg .hd ul li{
+    position: relative;
+    display: none;
+}
+.Big_bkg .hd ul li img{
+    height: 483px;
+}
+.Big_bkg .hd ul li.hd-last a{
+    height: 55px;
+    width: 100%;
+    position: absolute;
+    bottom: 37px;
+    left: 0;
+}
+.Big_bkg .hd ul li.on{
+    display: block;
+}
+.Big_bkg .bd{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+.Big_bkg .bd ul{
+    display: inline-block;
+    overflow: hidden;
+}
+.Big_bkg .bd ul li{
+    float: left;
+    width: 10px;
+    height: 10px;
+    background-color: #cccccc;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+.Big_bkg .bd ul li.on{
+    background-color: #006699;
+}
+/*-------项目--------*/
+.project{
+    height: 239px;
+    border: 1px solid #006699;
+    border-top-width: 4px;
+    padding: 8px 11px 12px 11px;
+}
+.project>ul>li{
+    float: left;
+    width: 277px;
+    margin-bottom: 23px;
+}
+.project>ul>li.w301{
+    width: 301px;
+    margin-left: 42px;
+    margin-right: 35px;
+}
+.project>ul>li.w321{
+    width: 321px;
+}
+.project>ul>li>h2{
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    color: #0066cc;
+    border-bottom: 2px solid #cccccc;
+}
+.project>ul>li>h2>i{
+    width: 113px;
+    border-bottom: 2px solid #0066cc;
+    margin-bottom: -3px;
+}
+.PJ li{
+    float: left;
+    color: #666666;
+    padding: 0 7px;
+    font-size: 13px;
+    border-right: 1px solid #999999;
+    margin: 7px 0;
+}
+.PJ li.brn{
+    border-right: none;
+}
+.PJ li.cl{
+    padding-left: 0;
+    color: #cc0000;
+}
+.PJ li.qingchundou{
+    padding-left: 0;
+}
+.Recommend{
+    height: 26px;
+    line-height: 26px;
+    color: #666666;
+    font-size: 14px;
+}
+.Recommend .tuiJian{
+    width: 43px;
+    height: 24px;
+    background-color: #cc0000;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 4px;
+    margin-top: 2px;
+    margin-right: 14px;
+}
+
+/*----------------内容-----------------*/
+.dynamic{
+    width: 314px;
+    height: 241px;
+    border: 1px solid #006699;
+    border-top-width: 5px;
+    padding: 0 4px 0 6px;
+}
+.dy{
+    width: 100%;
+    height: 38px;
+    border-bottom: 1px dashed #e6e6e6;
+}
+.dynamic ul li{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px dashed #e6e6e6;
+}
+.report{
+    height: 218px;
+}
+.dynamic ul li i{
+    width: 20px;
+    height: 15px;
+    background: url(../images/i_06.png) no-repeat left top;
+    vertical-align: middle;
+}
+.Report{
+    padding-top: 14px;
+    padding-left: 9px;
+}
+.Report-left{
+    width: 135px;
+}
+.Report-left ol li{
+    margin-bottom: 7px;
+}
+.More{
+    width: 324px;
+    height: 481px;
+    border: 1px solid #006699;
+    border-top-width: 5px;
+}
+.More .Gbo{
+    border-bottom: 1px solid #bacada;
+}
+.More .Gbo .Gbo-le{
+    width: 60px;
+    float: left;
+    padding-top: 14px;
+    padding-left: 14px;
+    padding-bottom: 22px;
+}
+.More .Gbo .Gbo-rg{
+    width: 250px;
+    float: left;
+    font-size: 14px;
+    position: relative;
+}
+.More .Gbo .Gbo-rg h2{
+    height: 42px;
+    line-height: 42px;
+    color: #065e9e;
+    margin-top: 3px;
+}
+.More .Gbo .Gbo-rg a{
+    width: 61px;
+    height: 23px;
+    color: #fff;
+    background-color: #f94350;
+    text-align: center;
+}
+.More .Gbo .Gbo-rg i{
+    width: 17px;
+    height: 14px;
+    background: url(../images/v_03.png) no-repeat left top;
+    position: absolute;
+    top: 18px;
+    right: 112px;
+}
+/*-----媒体报道--------*/
+
+.media a{
+    margin-left: 3px;
+}
+
+/*--------------------专家团队--------------------*/
+.Expert-team{
+    width: 1000px;
+    border: 1px solid #065e9e;
+    border-top-width: 5px;
+    position: relative;
+}
+.Expert-team h2.al-Ex{
+    margin-left: 16px;
+}
+.Expert-team .team{
+    width: 919px;
+    height: 365px;
+    padding-top: 8px;
+    padding-bottom: 25px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.Expert-team ul{
+    width: 3000px;
+    height: 365px;
+}
+.Expert-team ul li{
+    width: 225px;
+    float: left;
+    margin-right: 9px;
+}
+.Expert-team ul li p{
+    height: 24px;
+    line-height: 24px;
+    padding-top: 13px;
+}
+.Expert-team ul li p a{
+    color: #ff0000;
+}
+.Click-left{
+    width: 26px;
+    height: 63px;
+    background: url(../images/click_03.png) no-repeat left top;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -31px;
+}
+.Click-right{
+    width: 28px;
+    height: 62px;
+    background: url(../images/click_05.png) no-repeat left top;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -31px;
+}
+/*--------------------典型案例--------------------*/
+.classic-case{
+    width: 1000px;
+    height: 437px;
+    border: 1px solid #065e9e;
+    border-top-width: 5px;
+}
+.classic{
+    width: 100%;
+    height: 47px;
+}
+.classic-case .hd ul{
+    margin-bottom: 25px;
+}
+.classic-case .hd ul li{
+    float: left;
+    width: 120px;
+    height: 33px;
+    background-color: #eaeaea;
+    margin-right: 4px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 18px;
+    color: #393939;
+}
+.classic-case .hd{
+    padding: 0 4px;
+}
+.classic-case .hd ul li a{
+    width: 100%;
+}
+.classic-case .hd ul li.on{
+    font-size: 14px;
+    color: #fff;
+    background-color: #0078cf;
+}
+.classic-case .bd>ul{
+    width: 989px;
+    padding: 0 6px 0 5px;
+    display: none;
+}
+.classic-case .bd>ul.on{
+    display: block;
+}
+.classic-case .bd>ul>li{
+    float: left;
+    width: 300px;
+    height: 305px;
+    padding-bottom: 27px;
+    position: relative;
+}
+
+.WXSheng{
+    margin: 0 44px;
+}
+.WXSheng i{
+    width: 0;
+    height: 328px;
+    border-right: 1px dashed #b2b2b2;
+    position: absolute;
+    top: 0;
+}
+.wx{
+    left: -21px;
+}
+.ws{
+    right: -21px;
+}
+.Patient{
+    height: 200px;
+    position: relative;
+}
+.Patient ul{
+    width: 50px;
+    height: 200px;
+    background-color: #005eac;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.Patient ul li{
+    width: 16px;
+    float: left;
+    color: #fff;
+    margin: 0 4px;
+    font-size: 16px;
+}
+.Patient p{
+    height: 98px;
+    line-height: 24px;
+    text-indent: 2em;
+    font-size: 14px;
+    padding-top: 8px;
+}
+.Patient p a{
+    color: #cc0000;
+}
+
+
+/*--------------东治银屑病----------------*/
+.Psoriasis{
+    width: 995px;
+    height: 124px;
+    margin: 0 auto 22px;
+}
+/*----------公益导航-----------*/
+.GongYI{
+    width: 993px;
+    height: 423px;
+    border: 1px solid #0066cc;
+    margin-left: 3px;
+    border-top-width: 5px;
+}
+.GongYI .hd{
+    padding: 0 6px;
+    position: relative;
+}
+.GY{
+    height: 35px;
+    padding-bottom: 3px;
+    border-bottom: 1px dashed #ccc;
+    padding-left: 6px;
+}
+.GY li{
+    float: left;
+    width: 110px;
+    height: 35px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 35px;
+    color: #065e9e;
+}
+
+.GY li.on{
+    color: #fff;
+    background-color: #0066cc;
+}
+.GongYI>.hd .Gengduo{
+    position: absolute;
+    top: 0;
+    right: 17px;
+}
+.boDy{
+    width: 993px;
+    height: 384px;
+    display: none;
+}
+/*公益导航*/
+.boDy.on{
+    display: block;
+}
+.boDy-left{
+    width: 159px;
+    height: 384px;
+}
+.boDy-left a{
+    margin: 11px 10px 23px 12px;
+}
+.boDy-right{
+    margin-top: 12px;
+}
+.boDy-right>ul{
+    width: 829px;
+    height: 349px;
+}
+.boDy-right>ul>li{
+    float: left;
+    margin-bottom: 7px;
+    margin-right: 11px;
+}
+.boDy-right>ul>li.mr0{
+    margin-right: 0;
+}
+/*疾病导航*/
+.disease{
+    height: 341px;
+    padding-left: 13px;
+    margin: 15px 35px 0 35px;
+    border-left: 1px solid #cccccc;
+}
+.glands h2{
+    color: #fff;
+    height: 20px;
+    line-height: 20px;
+    background-color: #065e9e;
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 14px;
+}
+.glands li{
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    margin: 0 5px;
+    position: relative ;
+}
+.glands ul i{
+    width: 1px;
+    height: 12px;
+    background-color: #000;
+    position: absolute;
+    right: -5px;
+    top: 12px;
+}
+.DoctorNav{
+    padding-top: 15px;
+}
+.DoctorNav>dl{
+    float: left;
+    width: 133px;
+    height: 171px;
+    margin: 0 56px 7px 56px;
+}
+.DoctorNav>dl>dd{
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+}
+.Media-attention>ul{
+    padding-top: 14px;
+    padding-left: 22px;
+}
+.Media-attention>ul>li{
+    float: left;
+    width: 114px;
+    height: 44px;
+    margin-bottom: 10px;
+    margin-right: 24px;
+}
+.qualification ul{
+    margin: 8px 14px 0;
+}
+.qualification ul li{
+    float: left;
+}
+.qualification ul li.m{
+    margin: 0 17px;
+}
+
+
+
+/*---------------监管单位-------------*/
+.Unit{
+    height: 216px;
+}
+.danWei{
+    padding-bottom: 8px;
+}
+.CompanY{
+    margin-top: 48px;
+}
+.jDu{
+    display: none;
+}
+.jDu ul li{
+    float: left;
+}
+.on{
+    display: block;
+}
+.CompanY>dl{
+    float: left;
+    width: 108px;
+    height: 91px;
+    margin-right: 16px;
+    text-align: center;
+}
+.CompanY>dl>dd{
+    color: #636363;
+    height: 30px;
+    line-height: 30px;
+}
+.Envtal>ul{
+    margin: 28px 0 0 15px;
+}
+.Envtal>ul>li{
+    margin-right: 10px;
+}
+.equipment>ul{
+    margin-top: 28px;
+}
+.equipment>ul>li{
+    margin-right: 10px;
+}
+.equipment>ul>li.eq{
+    margin-left: 16px;
+}
+.Honor ul{
+    margin-left: 16px;
+    margin-top: 28px;
+}
+.Honor ul li{
+    margin-right: 10px;
+}
+/*------------------底部-------------------*/
+.footer{
+    height: 397px;
+    color: #fff;
+    font-size: 14px;
+    background-color: #666666;
+}
+.footer-top{
+    padding-top: 30px;
+}
+.footer-top .FR{
+    width: 170px;
+    height: 235px;
+    border-right: 1px solid #505050;
+    padding: 36px 0 0 5px;
+}
+.footer-top .FB{
+    width: 555px;
+    height: 271px;
+    border-right: 1px solid #505050;
+    padding-left: 6px;
+}
+.footer-top .FB dl{
+    float: left;
+    width: 90px;
+    margin-right: 21px;
+}
+.footer-top .FB dl dt{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #505050;
+    padding-top: 6px;
+}
+.footer-top .FB dl dd{
+    line-height: 33px;
+}
+.footer-top .FM{
+    width: 248px;
+    height: 271px;
+    padding-left: 16px;
+}
+.footer-top .FM .SyS{
+    float: left;
+    width: 112px;
+    height: 111px;
+    background: url(../images/fr_03.png) no-repeat left top;
+    margin-right: 10px;
+}
+.footer-top .FM ul{
+    float: left;
+}
+.footer-top .FM ul li{
+    height: 35px;
+    line-height: 35px;
+}
+.address{
+    margin-top: 13px;
+}
+.address a{
+    height: 33px;
+    line-height: 33px;
+}
+.footer-bt{
+    height: 64px;
+    padding-top: 33px;
+    text-align: center;
+}
+.footer-bt p{
+    height: 23px;
+    line-height: 23px;
+}

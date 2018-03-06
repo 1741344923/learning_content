@@ -1,0 +1,186 @@
+body{
+    margin-bottom: 10rem;
+}
+
+.title{
+    width: 10rem;
+    height: 4.6875rem;
+    position: relative;
+    margin-top: 0.78125rem;
+}
+.title img{
+    width: 10rem;
+    height: 4.6875rem;
+    background-size: 100% 100%;
+}
+.title a{
+    width: 2.65625rem;
+    height: 0.625rem;
+    position: absolute;
+    bottom: 0.65625rem;
+    right: 2.15625rem;
+
+}
+/*导语*/
+.Lead{
+    color: white;
+    height: 1.984375rem;
+    padding-bottom: 0.234375rem;
+    background: url(../images/lead.png) repeat-x bottom left #0099ff;
+}
+.Lead p{
+    height: 1.59375rem;
+    padding: 0.15625rem 0.15625rem 0.234375rem 0.15625rem;
+    line-height: 0.53125rem;
+    font-size: 0.375rem;
+}
+.Lead p span{
+    font-size: 0.5625rem;
+    font-weight: bolder;
+    margin: 0 0.15625rem 0 0.078125rem;
+}
+/*视频*/
+.video{
+    text-align: center;
+    margin-top: 0.640625rem;
+}
+.video a{
+    width: 5rem;
+    height: 3.75rem;
+    background: url(../images/video_03.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+
+/*------------------*/
+.Discount{
+    margin: 0 0.15625rem;
+}
+.Discount h2{
+    height: 1.0625rem;
+    line-height: 0.53125rem;
+    font-size: 0.375rem;
+    text-indent: 1em;
+    margin-top: 0.28125rem;
+    margin-bottom: 0.171875rem;
+}
+.Discount ul li{
+    float: left;
+    width: 3.140625rem;
+    height: 2.1875rem;
+    position: relative;
+}
+.Discount ul li.mr{
+    margin: 0 0.1328125rem;
+}
+.Discount ul li img{
+    width: 3.140625rem;
+    height: 2.1875rem;
+}
+.Discount ul li em{
+    width: 0.484375rem;
+    height: 0.484375rem;
+    line-height: 0.484375rem;
+    font-size: 0.375rem;
+    background-color: #ffea00;
+    position: absolute;
+    left: 1.328125rem;
+    bottom: 0.359375rem;
+    text-align: center;
+    border-radius: 50%;
+    color: red;
+}
+.dean{
+    text-align: center;
+}
+.dean img{
+    width: 9.6875rem;
+    height: 4.1875rem;
+    margin-top: 0.40625rem;
+}
+.paragraph{
+    font-size: 0.375rem;
+    margin-top: 0.171875rem;
+    padding: 0 0.15625rem;
+    color: #404040;
+}
+.paragraph p{
+    line-height: 0.625rem;
+    text-indent: 2em;
+}
+
+
+
+
+
+/*通用的样式*/
+.mt16{
+    margin-top: 0.25rem;
+}
+.mt42{
+    margin-top: 0.65625rem;
+}
+.mt45{
+    margin-top: 0.703125rem;
+}
+.mt25{
+    margin-top: 0.390625rem;
+}
+/*关爱银屑病患者善始善终 通用的*/
+.well{
+    text-align: center;
+    border-bottom: 1px solid #ff9966;
+    position: relative;
+    margin: 0 0.15625rem;
+}
+.well h2{
+    height: 0.78125rem;
+    line-height: 0.78125rem;
+    font-size: 0.625rem;
+    color: #000;
+}
+.well p{
+    color: #7c7c7c;
+    height: 0.453125rem;
+    line-height: 0.375rem;
+    font-size: 0.375rem;
+    padding-bottom: 0.15625rem;
+}
+.well:after{
+    content: '';
+    width: 0.5625rem;
+    height: 0.046875rem;
+    background-color: #eb6100;
+    position: absolute;
+    bottom: -0.03125rem;
+    left: 4.71875rem;
+}
+/*电话咨询通用的部分*/
+.information{
+    text-align: center;
+}
+.information a{
+    width: 3.515625rem;
+    height: 0.90625rem;
+    line-height: 0.90625rem;
+    font-size: 0.4375rem;
+    border-radius: 0.390625rem;
+}
+.information a.im-left{
+    color: black;
+    background-color: #ffea00;
+    margin-right: 0.734375rem;
+}
+.information a.im-right{
+    color: white;
+    background-color: #00b7ee;
+}
+.information a span{
+    vertical-align: middle;
+}
+.information a i{
+    width: 0.265625rem;
+    height: 0.296875rem;
+    line-height: 0.296875rem;
+    vertical-align: middle;
+    display: inline-block;
+}

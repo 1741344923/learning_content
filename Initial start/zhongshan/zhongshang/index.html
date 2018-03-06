@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet" href="../style/reset.css">
+        <link rel="stylesheet" href="../style/index.css">
+        <script src="../js/TouchSlide.1.1.js"></script>
+        <script src="../js/index.js"></script>
+        <script>
+            function fn(){
+                var width=document.documentElement.clientWidth;
+                var html=document.getElementsByTagName('html')[0];
+                html.style.fontSize=width/10+'px';
+            }
+            fn();
+            window.onresize=fn;
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
