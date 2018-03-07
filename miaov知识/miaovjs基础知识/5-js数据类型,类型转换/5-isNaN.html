@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            // NaN : not a number 不是个数字 的 数字类型
+            // isNaN  : ls not a number 是不是不是一个数字(不是数字)
+            isNaN(); // true  false
+            // 判断某些值是不是数字
+            // 不喜欢数字 讨厌数字
+            console.log( isNaN(250) ); //false
+            console.log( isNaN('我爱你') ); // true
+            console.log( isNaN( function () {
+                alert(1);
+            })); //true
+
+            console.log( isNaN('250') );//false
+
+            //Number() '250'=> 250 => false
+
+            console.log( isNaN( [] ) );//false
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

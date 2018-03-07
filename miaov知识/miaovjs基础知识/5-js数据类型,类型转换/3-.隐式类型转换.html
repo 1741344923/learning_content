@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /*
+            显示类型转换 (强制类型转换):
+            Number()
+            parseInt()
+            parseFloat()
+
+            隐式类型转换: - * / %
+                        '200'-3  变成数字
+                        +
+
+                        ++ --
+                        ><
+                        ! 取反  把右边的数据类型转成布尔值了...
+                        ==
+
+            */
+
+            //console.log( '200'-3 );// 197 变成数字
+            //console.log( 200+'3' );// 2003 变成字符串
+
+            var a = '10';
+            a++;
+            console.log( a ); // 数字 11
+
+            var a = '10';
+            a--;
+            console.log( a ); // 数字9
+
+
+            console.log( '10'>9 ); //true
+
+            console.log( '10000000000000'>'9' ); // false
+            // 数字的比较与字符串的比较
+            // '10000000000000' '9'
+
+            console.log( !true ); // false
+            console.log( !'ok' ); // false
+
+
+            console.log( '2' == 2 ); // true
+            console.log( '2' === 2 ); // false 上面的不能判断类型
+
+
+            console.log( Number('......') ); // NaN
+            console.log( '......'-9 ); // NaN
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+           // JS中的数据类型：数字，字符串，布尔值、函数、对象(obj [] {} null)、未定义
+
+            var a = Number('abc');
+            console.log( a ); // NaN
+            console.log( typeof a ); // number
+            console.log( '200px'-100 ); //NaN
+
+            if ( a ){
+                console.log('真');
+            }else (
+                console.log('假')
+            );// 假货 NaN 是 false
+
+
+           var abc = 123;
+           console.log( abc === abc ); // true
+
+           var abc = 'miaov';
+           console.log( abc === abc); // true
+
+           var abc = [];
+           // NaN 与自己都不相等。。。
+           console.log( a === a ); //false
+
+            /*
+            NaN : not a number 不是个数字 的 数字类型
+
+            一旦写程序中出现：NaN 肯定进行了非法的运算操作
+
+         */
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

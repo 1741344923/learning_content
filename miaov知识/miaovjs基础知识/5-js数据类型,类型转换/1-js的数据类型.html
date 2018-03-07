@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /*
+            ECMAScript: 标准、核心
+            HTML 标签类型：block、inline、inline-block、table......
+            JS中的数据类型：
+            数字，字符串，布尔值、函数、对象(obj [] {} null)、未定义
+
+            typrof 判断数据类型
+            */
+            var i = 0;
+            console.log( typeof i ); // number 数字
+
+            var s = 'miaov ';
+            console.log( typeof s ); //string  字符串
+            console.log( s.length ); //  6 如果敲了空格长度也会计算。。。
+            console.log( s.charAt(4) ); // v
+
+            var b = true; //布尔值  true 真-1 false 假-0
+            console.log( typeof b ); //boolean
+            //if( 120<90 ){}
+            //for (;false;){}
+
+            var fn = function () {
+                alert(1);
+            };
+            // fn();
+            function fn1() {
+                alert(2);
+            }
+            //alert( fn1 );
+            //fn1();
+
+
+            var obj = document;
+            //console.log( typeof obj ); // object  物体、东西、对象
+            obj.abc = 123;
+            obj.onOff = true;
+            //console.log( document.abc );  // 123
+            //console.log( document.onOff ); // true
+
+            /*obj.fn1 = function () {
+                alert(1);
+            };
+
+            obj.fn1(); // 1*/
+
+
+
+            var arr = [1,2,3,4];
+            //console.log( arr.length );
+            //arr[2] = 345;
+            //console.log( arr );
+            //arr.push( 5,6,7 );
+            //console.log( arr );
+            //console.log( typeof arr ); // object
+
+            arr.abc = 999;
+            arr.fn1 = function () {
+                alert('ok');
+            };
+            //arr.fn1();
+            //console.log( arr.abc );
+
+
+            var json = { name:'miaov',age:5 };
+            console.log( json.name ); // miaov
+            console.log( json.name + '今年'+json.age +'岁了' );
+            //miaov今年5岁了
+            console.log( typeof json ); //object
+
+            var n = null;
+            console.log( typeof n ); //object
+            n.abc = 123;
+            //console.log( n );
+            // Uncaught TypeError：空不能设置属性“ABC”
+            //Uncaught TypeError: Cannot set property 'abc' of null
+
+
+            var u;
+            console.log( typeof u ); // undefined 未定义
+            // 表示你写的程序出问题了！！！
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
