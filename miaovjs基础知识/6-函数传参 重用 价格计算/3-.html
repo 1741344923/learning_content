@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            ul {
+                padding: 0;
+                margin: 0;
+            }
+
+            li {
+                list-style: none;
+            }
+
+            body {
+                background: burlywood;
+            }
+
+            .box {
+                width: 400px;
+                height: 500px;
+                position: relative;
+                background: #aaaaaa;
+                float: left;
+                margin-right: 70px;
+            }
+
+            .box img {
+                width: 100%;
+                height: 100%;
+
+            }
+
+            .box ul {
+                width: 40px;
+                position: absolute;
+                top: 0;
+                right: -60px;
+            }
+
+            .box li {
+                width: 40px;
+                height: 40px;
+                margin-bottom: 4px;
+                background: red;
+            }
+
+            .box .active {
+                background: pink;
+            }
+
+            .box span,
+            .box p {
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                color: #ffffff;
+                background: rgba(0, 0, 0, 0.5);
+                position: absolute;
+                left: 0;
+            }
+
+            .box span {
+                top: 0;
+            }
+
+            .box p {
+                bottom: 0;
+                margin: 0;
+            }
+        </style>
+        <script>
+            window.addEventListener('load', function (ev) {
+                var oDiv = document.getElementById('div1');
+                var oImg = oDiv.getElementsByTagName('img')[0];
+                var oSpan = oDiv.getElementsByTagName('span')[0];
+                var oP = oDiv.getElementsByTagName('p')[0];
+                var oUl = oDiv.getElementsByTagName('ul')[0];
+                var aLi = oUl.getElementsByTagName('li');
+
+                var arrUl = [
+                    '../image/1.jpg',
+                    '../image/2.jpg',
+                    '../image/3.jpg',
+                    '../image/4.jpg'
+                ];
+
+                var arrText = ['第一张', '第二张', '第三张', '第四张'];
+
+                var num = 0;
+
+                for (var i = 0; i < arrUl.length; i++) {
+                    oUl.innerHTML += '<li></li>';
+                }
+
+                // 初始化
+                function fnTab() {
+                    oImg.src = arrUl[num];
+                    oSpan.innerHTML = 1 + num + '/' + arrUl.length;
+                    oP.innerHTML = arrText[num];
+                    for (var i = 0; i < aLi.length; i++) {
+                        aLi[i].className = '';
+                    }
+
+                    aLi[num].className = 'active';
+                }
+
+                fnTab();
+
+                for (var i = 0; i < aLi.length; i++) {
+                    aLi[i].index = i;// 索引值
+                    aLi[i].onclick = function (ev2) {
+                        num = this.index;
+
+                        /*oImg.src = arrUl[num];
+                         oSpan.innerHTML = 1 + num + '/' + arrText.length;
+                         oP.innerHTML = arrText[num];
+                         for (var i = 0; i < aLi.length; i++) {
+                         aLi[i].className = '';
+                         }
+                         //this.className = 'active';
+                         aLi[num].className = 'active';*/
+
+                        fnTab();
+                    }
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="div1" class="box">
+            <img src="" alt="">
+            <span>数量正在加载中.....</span>
+            <p>文字正在加载中......</p>
+            <ul>
+
+            </ul>
+        </div>
+        <div id="div2" class="box">
+            <img src="" alt="">
+            <span>数量正在加载中.....</span>
+            <p>文字正在加载中......</p>
+            <ul>
+
+            </ul>
+        </div>
+    </body>
+</html>
