@@ -72,22 +72,33 @@
             }
         </style>
         <script>
-            window.addEventListener('load', function (ev) {
-                var oDiv = document.getElementById('div1');
+            /* 重用代码
+            1、尽量保证HTML 代码结构一致
+            2、把核心主程序实现 用函数包起来
+            3、把每组不同的值找出来 通过传参实现
+            */
+            window.onload = function () {
+                fnTab('div1',[
+                    '../image/1.jpg',
+                    '../image/2.jpg',
+                    '../image/3.jpg',
+                    '../image/4.jpg'
+                ],['第一张', '第二张', '第三张', '第四张'],'onclick');
+                fnTab('div2',[
+                    '../image/1.jpg',
+                    '../image/3.jpg',
+                    '../image/4.jpg'
+                ],['第一张', '第二张', '第三张'],'onmouseover');
+            };
+
+            function fnTab(id,arrUl,arrText,evt) {
+                var oDiv = document.getElementById(id);
                 var oImg = oDiv.getElementsByTagName('img')[0];
                 var oSpan = oDiv.getElementsByTagName('span')[0];
                 var oP = oDiv.getElementsByTagName('p')[0];
                 var oUl = oDiv.getElementsByTagName('ul')[0];
                 var aLi = oUl.getElementsByTagName('li');
 
-                var arrUl = [
-                    '../image/1.jpg',
-                    '../image/2.jpg',
-                    '../image/3.jpg',
-                    '../image/4.jpg'
-                ];
-
-                var arrText = ['第一张', '第二张', '第三张', '第四张'];
 
                 var num = 0;
 
@@ -111,7 +122,7 @@
 
                 for (var i = 0; i < aLi.length; i++) {
                     aLi[i].index = i;// 索引值
-                    aLi[i].onclick = function (ev2) {
+                    aLi[i][evt] = function (ev2) {
                         num = this.index;
 
                         /*oImg.src = arrUl[num];
@@ -126,7 +137,7 @@
                         fnTab();
                     }
                 }
-            });
+            }
         </script>
     </head>
     <body>

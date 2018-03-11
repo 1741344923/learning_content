@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            alert(a);// ...
+            alert( fn1 );// 火狐不能对下面的函数进行预解析
+
+            var a = 1;
+            function fn1() {
+                alert(123);
+            }
+
+            if ( true ){
+
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
