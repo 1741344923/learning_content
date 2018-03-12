@@ -8,14 +8,12 @@
                 padding: 0;
                 margin: 0;
             }
-
             .lis {
                 width: 80px;
                 height: 30px;
                 position: relative;
                 border: 1px solid #dddddd;
             }
-
             .lis a {
                 display: block;
                 line-height: 30px;
@@ -24,7 +22,6 @@
                 color: #000;
                 background-color: #f1f1f1;
             }
-
             .lis ul {
                 width: 140px;
                 border: 1px solid #dddddd;
@@ -34,34 +31,26 @@
                 background-color: antiquewhite;
                 display: none;
             }
-
             .lis ul li {
                 text-align: center;
                 line-height: 30px;
             }
         </style>
         <script>
-
             // Uncaught TypeError: Cannot set property 'onmouseover' of null //空不能设置属性“鼠标”
-
             window.onload = function (ev) {
-
                 var li = document.getElementById('lis1');
                 var ul = document.getElementById('ul1');
                 var a = document.getElementById('link');
-
                 li.onmouseover = function () {
                     ul.style.display = 'block';
                     a.style.background = 'yellow';
                 };
-
                 ul.onmouseout = function () {
                     ul.style.display = 'none';
                     a.style.background = '#f1f1f1';
                 };
-
             };
-
         </script>
     </head>
     <body>
@@ -75,8 +64,5 @@
                 </ul>
             </li>
         </ul>
-
-
     </body>
-
 </html>

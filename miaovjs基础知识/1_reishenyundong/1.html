@@ -51,17 +51,12 @@
             7、margin 负值
             ......  是否可以列举12种以上？？？？
 
-
-
-            JS实现原理
-
+           JS实现原理
                 写一个JS效果的步骤:
-
                 1、先实现布局
                 2、实现原理
                 3、了解JS语法
         -->
-
     </head>
     <body>
         <ul>
@@ -79,9 +74,6 @@
                 1、通过ID名称来获取元素：
                 document文件文档  get得到  element元素  by通过  id 'link'
                 document.getElementById('link')
-                2、
-                3......
-
 
             事件: 鼠标事件、键盘事件、系统事件、表单事件、自定义事件......
 
@@ -93,7 +85,6 @@
             onmouseup        鼠标抬起时发生一件事
             ......
 
-
             onload 加载完以后执行......
             window.onload = 事情
             img.onload
@@ -102,7 +93,6 @@
 
             如何添加事件:
             元素.onmouseover
-
 
             函数: 可以理解为_命令，做一些事~~
                 function  abc  （）{   abc是名字可以任意命名。。。  // 肯定不会主动执行的！！！
@@ -115,40 +105,30 @@
 
                 元素.事件 = function (){};
 
-
                     测试:
                     alert(1);  带了一个确定按钮的警告框
                     alert('ok'); 'ok' 字符串 // 单引号双引号都可以
 
                     初学者: 最好保持一种随时写随时测试的习惯!
-
-
             变量:
                    var li = document.getElementById('');
                    var num = 123;
                    var name = 'leo';
-
-
         -->
         <script>
-
             var li = document.getElementById('lis1');
             var ul = document.getElementById('ul1');
             var a = document.getElementById('link');
-
             li.onmouseover = show;
             ul.onmouseout = hide;
-
             function show() {
                 ul.style.display = 'block';
                 a.style.background = 'yellow';
             }
-
             function hide() {
                 ul.style.display = 'none';
                 a.style.background = '#f1f1f1';
             }
         </script>
     </body>
-
 </html>
