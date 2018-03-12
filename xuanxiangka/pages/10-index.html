@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../js/jquery-1.7.2.min.js"></script>
+        <style>
+            ul{
+                margin: 0;
+                padding: 0;
+            }
+            li{
+                list-style: none;
+            }
+            .box{
+                width: 600px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            .box .hd{
+                margin-bottom: 30px;
+            }
+            .box .hd ul li{
+                width: 100px;
+                height: 40px;
+                line-height: 40px;
+                font-size: 30px;
+                color: #ffffff;
+
+                display: inline-block;
+                background-color: pink;
+            }
+            .box .hd ul li.active{
+                background-color: red;
+            }
+            .box .bd ul li{
+                width: 100%;
+                height: 300px;
+                border: 1px solid #dddddd;
+                background-color: lightpink;
+                display: none;
+            }
+            .box .bd ul li.on{
+                display: block;
+            }
+            .box .bd ul li img{
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+
+        <script>
+            /*$(document).ready(function () {
+
+                $(".box .hd ul li").on("click",function () {
+                    var s = $(this).index();
+
+
+                    $(this)
+                        .addClass("active")
+                        .siblings()
+                        .removeClass("active");
+
+                    $(".box .bd ul li").eq(s)
+                        .addClass("on")
+                        .siblings()
+                        .removeClass("on");
+
+
+                });
+            });*/
+
+            /*$(function () {
+                $(".box .hd ul li").on("click",function () {
+
+                    var s = $(this).index();
+
+                    $(this).addClass("active")
+                        .siblings()
+                        .removeClass("active");
+
+                    $(".box .bd ul li").eq(s)
+                        .addClass("on")
+                        .siblings()
+                        .removeClass("on");
+                });
+            });*/
+
+            /*window.addEventListener('load',function () {
+                var aLi = document.querySelectorAll('.box .hd ul li');
+                var oBd = document.querySelectorAll('.box .bd ul li');
+                for ( var i=0;i<aLi.length;i++ ){
+                    aLi[i].index = i;
+                    aLi[i].addEventListener('click',function () {
+                        for ( var i=0;i<oBd.length;i++ ){
+                            aLi[i].classList.remove('active');
+                            oBd[i].classList.remove('on');
+                        }
+                        this.classList.add('active');
+                        var s = this.index;
+                        oBd[s].classList.add('on');
+                    })
+                }
+            });*/
+
+            /*window.addEventListener('load',function (ev) {
+                var aLi = document.querySelectorAll('.box .hd ul li');
+                var aLi1 = document.querySelectorAll('.box .bd ul li');
+                for ( var i=0;i<aLi.length;i++ ){
+                    aLi[i].index = i;
+                    aLi[i].addEventListener('click',function () {
+                        for ( var i=0;i<aLi1.length;i++ ){
+                            aLi[i].classList.remove('active');
+                            aLi1[i].classList.remove('on');
+                        }
+                        this.classList.add('active');
+                        var s = this.index;
+                        aLi1[s].classList.add('on');
+                    })
+                }
+            });*/
+
+            /*window.addEventListener('load',function (ev) {
+                var aLi = document.querySelectorAll('.box .hd ul li');
+                var aLi1 = document.querySelectorAll('.box .bd ul li');
+                for ( var i=0;i<aLi.length;i++ ){
+                    aLi[i].index = i;
+                    aLi[i].addEventListener('click',function () {
+                        for ( var i=0;i<aLi1.length;i++ ){
+                            aLi[i].classList.remove('active');
+                            aLi1[i].classList.remove('on');
+                        }
+                        this.classList.add('active');
+                        var s = this.index;
+                        aLi1[s].classList.add('on');
+                    })
+                }
+            });*/
+
+            /*window.addEventListener('load',function (ev) {
+                var aLi = document.querySelectorAll('.box .hd ul li');
+                var aLi1 = document.querySelectorAll('.box .bd ul li');
+                for ( var i=0;i<aLi.length;i++ ){
+                    aLi[i].index = i;
+                    aLi[i].addEventListener('click',function () {
+                        for ( var i=0;i<aLi1.length;i++ ){
+                            aLi[i].classList.remove('active');
+                            aLi1[i].classList.remove('on');
+                        }
+                        this.classList.add('active');
+                        var s = this.index;
+                        aLi1[s].classList.add('on');
+                    })
+                }
+            });*/
+
+            /*window.addEventListener('load',function (ev) {
+                var aLi = document.querySelectorAll('.box .hd ul li');
+                var aLi1 = document.querySelectorAll('.box .bd ul li');
+                for ( var i=0;i<aLi.length;i++ ){
+                    aLi[i].index = i;
+                    aLi[i].addEventListener('click',function () {
+                        for ( var i=0;i<aLi1.length;i++ ){
+                            aLi[i].classList.remove('active');
+                            aLi1[i].classList.remove('on');
+                        }
+                        this.classList.add('active');
+                        var s = this.index;
+                        aLi1[s].classList.add('on');
+                    });
+                }
+            });*/
+
+            /*window.addEventListener('load',function (ev) {
+                var aLi = document.querySelectorAll('.box .hd ul li');
+                var aLi1 = document.querySelectorAll('.box .bd ul li');
+                for ( var i=0;i<aLi.length;i++ ){
+                    aLi[i].index = i;
+                    aLi[i].addEventListener('click',function () {
+                        for ( var i=0;i<aLi1.length;i++ ){
+                            aLi[i].classList.remove('active');
+                            aLi1[i].classList.remove('on');
+                        }
+                        this.classList.add('active');
+                        var s = this.index;
+                        aLi1[s].classList.add('on');
+                    });
+                }
+            });*/
+
+            window.addEventListener('load',function (ev) {
+                var aLi = document.querySelectorAll('.box .hd ul li');
+                var aLi1 = document.querySelectorAll('.box .bd ul li');
+                for ( var i=0;i<aLi.length;i++ ){
+                    aLi[i].index = i;
+                    aLi[i].addEventListener('click',function () {
+                        for ( var i=0;i<aLi1.length;i++ ){
+                            aLi[i].classList.remove('active');
+                            aLi1[i].classList.remove('on');
+                        }
+                        this.classList.add('active');
+                        var s = this.index;
+                        aLi1[s].classList.add('on');
+                    })
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <div class="box" id="box1">
+            <div class="hd">
+               <ul><li class="active">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li></ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    <li class="on"><img src="../image/1.jpg" alt=""></li>
+                    <li><img src="../image/2.jpg" alt=""></li>
+                    <li><img src="../image/3.jpg" alt=""></li>
+                    <li><img src="../image/4.jpg" alt=""></li>
+                    <li><img src="../image/5.jpg" alt=""></li>
+                    <li><img src="../image/6.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
