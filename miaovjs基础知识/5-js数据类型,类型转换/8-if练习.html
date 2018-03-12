@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            window.onload = function (ev) {
+                var oInp = document.getElementById('input1');
+                var oBtn = document.getElementById('input2');
+                oBtn.onclick = function (ev2) {
+                    var value = oInp.value.trim(); // .trim()  去掉首尾空格
+                    if (value == '') {
+                        console.log(value);
+                        alert('没有输入,不能为空');
+                    } else if (isNaN(Number(value))) {
+                        console.log(Number(value));
+                        console.log(isNaN(Number(value)));
+                        alert('输入的是不是数字');
+                    } else if (value.charAt(0) == '0') {
+                        console.log(value.charAt(0));
+                        alert('不能有0在前面');
+                    } else if (parseInt(value) != parseFloat(value)) {
+                        console.log(parseInt(value), parseFloat(value));
+                        alert('不能是小数');
+                    } else if (value < 10000 || value > 9999999999) {
+                        console.log(value);
+                        alert('输入的数字必须在5位以上，10位以内');
+                    } else {
+                        alert('输入正确');
+                    }
+                };
+            };
+
+            /*window.onload = function (ev) {
+                var oInp = document.getElementById('input1');
+                var oBtn = document.getElementById('input2');
+                oBtn.onclick = function (ev2) {
+                    var value = oInp.value.trim(); // .trim()去掉首尾空格
+                    if ( value == '' ){
+                        alert('不能为空，请输入');
+                    }else if(isNaN(Number(value))){
+                        alert('输入的是不是数字');
+                    }else if(value.charAt(0) == '0'){
+                        alert('不能有0在前面');
+                    }else if(parseInt(value) != parseFloat(value) ){
+                        alert('不能是小数');
+                    }else if(value <10000 || value > 9999999999){
+                        alert('输入的数字必须在5位以上，10位以内');
+                    }else {
+                        alert('输入正确');
+                    }
+                }
+            };*/
+
+            /*window.onload = function (ev) {
+                var oInp = document.querySelector('#input1');
+                var oBtn = document.querySelector('#input2');
+                oBtn.onclick = function () {
+                    var value = oInp.value.trim(); // 去掉首尾空格
+                    if ( value == '' ){
+                        alert('输入点内容吧！！！');
+                    }else if( isNaN( Number(value))){
+                        alert('输入的是不是数字');
+                    }else if( value.charAt(0) == '0' ){
+                        alert('不能有0在前面');
+                    }else if( parseInt(value) != parseFloat(value) ){
+                        alert('不能是小数');
+                    }else if ( value < 10000 || value > 9999999999 ){
+                        alert('输入的数字必须在5位以上，10位以内');
+                    }
+                }
+            }*/
+        </script>
+    </head>
+    <body>
+        <div>请输入QQ号码:
+            <input id="input1" type="text"/>
+            <input id="input2" type="button" value="判断"/><br/>
+            1、有没有输入 <br/>
+            2、输入的是不是数字 <br/>
+            3、不能有0在前面 <br/>
+            4、不能是小数 <br/>
+            5、输入的数字必须在5位以上，10位以内 <br/>
+        </div>
+    </body>
+</html>
