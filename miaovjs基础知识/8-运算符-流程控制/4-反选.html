@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            window.addEventListener('load', function (ev) {
+                var aInput = document.getElementsByTagName('input');
+
+                //oInput[1].checked = false; // 取消了按钮身上的选中
+                //oInput[2].checked = true; // 在原本没有选中的身上加了一个选中的样式
+
+                aInput[0].onclick = function () {
+                    for ( var i=1;i<aInput.length;i++ ){
+
+                        aInput[i].checked = !aInput[i].checked;
+
+                        /*if( aInput[i].checked ){
+                            aInput[i].checked = false;
+                        }else {
+                            aInput[i].checked = true;
+                        }*/
+                    }
+                }
+
+            })
+        </script>
+    </head>
+    <body>
+        <input type="button" value="反选"/>
+        <ul>
+            <li><input type="checkbox" checked/></li>
+            <li><input type="checkbox"/></li>
+            <li><input type="checkbox" checked/></li>
+            <li><input type="checkbox"/></li>
+            <li><input type="checkbox"/></li>
+        </ul>
+    </body>
+</html>

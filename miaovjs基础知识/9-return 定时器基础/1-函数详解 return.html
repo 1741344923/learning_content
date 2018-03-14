@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /*return // 返回值
+            数字、字符串、布尔、函数、
+            对象(window,document,元素,[],{},null)、未定义*/
+
+            /*function fn1() {
+                return 100;
+            }
+            alert( fn1() ); // 100
+
+
+            function fn2() {
+                return 'miaov';
+            }
+            alert( fn2() );            // miaov
+            alert( fn2().length );     // 5
+            alert( typeof fn2() );     // string*/
+
+
+
+            /*function fn3() {
+                return function () {
+                    alert(1); // 嘿嘿，我是注释~~~
+                }
+            }
+            alert( fn3() );
+                /!*
+                function () {
+                    alert(1); // 嘿嘿，我是注释~~~
+                }
+                *!/
+            fn3()(); // 出来的是函数里面的 1*/
+
+
+            /*function fn3() {
+                return function (a) { alert(a); }
+            }
+            fn3()(10); // 10*/
+
+
+            /*fn4(20)(10);
+            function fn4(a) {
+                return function (b) {
+                    alert(a+b);
+                }
+            } // 30*/
+
+
+            function fn5() {
+                return window;
+            }
+            fn5().onload = function () {
+                document.body.innerHTML = 123;
+            }
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
