@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="4-miaov.js"></script>
+        <style>
+            #div1{
+                width: 100px;
+                height: 120px;
+                background-color: red;
+            }
+        </style>
+        <script>
+            $(function () {
+
+                //$('div1').style.width = '300px';
+
+                $('btn1').onclick = function () {
+                    //console.log( $('div1').id ); //div1
+
+                    // 下面的写法是空白的 获取不到样式表里的 只能找到行间里面的width
+                    //console.log( $('div1').style.width );
+
+                    //$('div1').style.cssText = 'width:350px;';
+
+                    // 获取到的是计算机(浏览器)计算后的样式
+                    //console.log( getComputedStyle( $('div1')).width ); // 100px ie6 7 8 不兼容
+
+                    //console.log( $('div1').currentStyle.width );//标准浏览器不兼容
+
+                    if ( $('div1').currentStyle ){
+                        console.log( $('div1').currentStyle.width );
+                    }else {
+                        console.log( getComputedStyle( $('div1')).width );
+                    }
+
+
+
+                };
+
+                alert( getStyle( $('div1'),'width') );
+                alert( getStyle( $('div1'),'height') );
+                alert( getStyle( $('div1'),'backgroundColor') );
+                // background:url() red ...... 复合样式（不要获取）
+                // backgroundColor 单一样式 （不要用来做判断）
+                // undefined 不能有空格 带了空格就是undefined未定义
+                // 不要获取压根没有设置的样式,不兼容
+
+            });
+
+
+        </script>
+    </head>
+    <body>
+        <input id="btn1" type="button" value="按钮"/>
+        <div id="div1"></div>
+    </body>
+</html>

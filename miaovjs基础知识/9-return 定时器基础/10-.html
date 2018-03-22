@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            body{
+                background-color: pink;
+            }
+            .div1{
+                width: 200px;
+                height: 200px;
+                border: 1px solid #000000;
+                position: fixed;
+                left: 50%;
+                top: 50%;
+                margin-left: -100px;
+                margin-top: -100px;
+                display: none;
+            }
+            .div1 .div2{
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                font-size: 12px;
+                background-color: white;
+                border-radius: 50%;
+                position: absolute;
+                right: -6px;
+                top: -4px;
+                text-align: center;
+            }
+        </style>
+        <script>
+            window.addEventListener('load',function () {
+                var close = document.getElementsByTagName('div');
+
+                setTimeout( function () {
+                    close[0].style.display = 'block';
+                },2000);
+
+                close[1].onclick = function () {
+                    close[0].style.display = 'none';
+                    setTimeout( function () {
+                        close[0].style.display = 'block';
+                    },2000);
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="div1">
+            <div class="div2">x</div>
+        </div>
+    </body>
+</html>
