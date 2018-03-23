@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /*
+             系统时间对象
+             */
+
+            // 当前 系统的时间对象
+
+            //alert( new Date() ); //Fri Mar 23 2018 20:14:28 GMT+0800 (中国标准时间)
+
+            window.addEventListener('load', function () {
+
+                var oBody = document.body;
+
+                setInterval(fnTime, 1000);
+
+                fnTime();
+
+                function fnTime() {
+                    // myTime typeof object
+                    var myTime = new Date();
+
+                    // number
+                    var iYear = myTime.getFullYear();
+                    //alert( iYear );  // 2018
+                    var iMonth = myTime.getMonth() + 1;
+                    //alert( iMonth ); // 出来的比实际的月份要少所以要加1
+                    var iDate = myTime.getDate();
+                    var iWeek = myTime.getDay();
+                    // alert( iWeek ); 星期几 出来的是个数字
+                    var iHours = myTime.getHours();
+                    var iMin = myTime.getMinutes();
+                    var iSec = myTime.getSeconds();
+                    var str = '';
+
+                    if (iWeek === 0) iWeek = '星期日';
+                    if (iWeek === 1) iWeek = '星期一';
+                    if (iWeek === 2) iWeek = '星期二';
+                    if (iWeek === 3) iWeek = '星期三';
+                    if (iWeek === 4) iWeek = '星期四';
+                    if (iWeek === 5) iWeek = '星期五';
+                    if (iWeek === 6) iWeek = '星期六';
+
+                    /*getFullYear(); // 年份
+                     getMonth();// 月份
+                     getDate(); // 多少号
+                     getDay(); // 星期几
+                     getHours(); // 时
+                     getMinutes(); // 分
+                     getSeconds(); // 秒*/
+
+                    str = iYear + '年' + iMonth + '月' + iDate + '日 ' + iWeek + ' ' + toTwo(iHours) + ':' + toTwo(iMin) + ':' + toTwo(iSec);
+
+                    //alert( str );//2018年3月23日星期五20:40:24
+
+
+                    oBody.innerHTML = str;
+                }
+            });
+
+            //alert( toTwo(5) ); // '05'
+            //alert( toTwo(15) ); // '15'
+            function toTwo(n) {
+                return n < 10 ? '0' + n : '' + n;
+            }
+        </script>
+    </head>
+    <body style="font-size: 80px;">
+
+    </body>
+</html>

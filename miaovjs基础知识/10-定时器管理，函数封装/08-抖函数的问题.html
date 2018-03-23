@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            img{
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: 200px;
+            }
+        </style>
+        <script>
+            function getStyle(obj, attr) {
+                return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj)[attr];
+            }
+
+            function shake(obj, attr, endFn) {
+
+                var pos = parseInt(getStyle(obj, attr));// 有隐患的
+
+                var arr = []; // 20,-20,18,-18......0
+
+                var num = 0;
+                var timer = null;
+
+                for (var i = 20; i > 0; i -= 2) {
+                    arr.push(i, -i);
+                }
+                arr.push(0);
+
+                //alert( arr );
+
+                clearInterval(obj.shake);
+                obj.shake = setInterval(function () {
+                    obj.style[attr] = pos + arr[num] + 'px';
+                    num++;
+                    if (num == arr.length) {
+                        clearInterval(obj.shake);
+                        endFn && endFn();
+                    }
+                }, 100)
+            }
+            window.addEventListener('load',function () {
+                var aImg = document.getElementsByTagName('img');
+
+                for ( var i=0;i<aImg.length;i++ ){
+                    aImg[i].style.left = 90+i*110+'px';
+
+                    aImg[i].onmouseover = function () {
+                        shake( this,'top' );
+                    }
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <img src="../image/1.jpg" alt="">
+        <img src="../image/2.jpg" alt="">
+        <img src="../image/3.jpg" alt="">
+        <img src="../image/4.jpg" alt="">
+        <img src="../image/5.jpg" alt="">
+        <img src="../image/6.jpg" alt="">
+        <img src="../image/7.jpg" alt="">
+    </body>
+</html>
