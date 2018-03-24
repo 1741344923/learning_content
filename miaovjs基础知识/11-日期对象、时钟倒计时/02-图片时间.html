@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            window.addEventListener('load', function () {
+
+                var oBody = document.body;
+                var oP = document.getElementById('timer');
+                var aImg = document.getElementsByTagName('img');
+
+                setInterval(fnTime, 1000);
+
+                fnTime();
+
+                function fnTime() {
+                    var myTime = new Date();
+                    var iHours = myTime.getHours();
+                    var iMin = myTime.getMinutes();
+                    var iSec = myTime.getSeconds();
+                    var str = toTwo(iHours) + toTwo(iMin) +  toTwo(iSec);
+
+                    //str = '171816';
+
+                    oP.innerHTML = str;
+
+                    //str.charAt( 5 );
+                    //aImg[4].src = 'img/'+str.charAt( 4 )+'.JPG';
+                    //aImg[5].src = 'img/'+str.charAt( 5 )+'.JPG';
+
+                    for ( var i=0;i<str.length;i++ ){
+                        aImg[i].src = 'img/'+str.charAt(i)+'.JPG';
+                    }
+                }
+            });
+
+            function toTwo(n) {
+                return n < 10 ? '0' + n : '' + n;
+            }
+        </script>
+    </head>
+    <body>
+        <p id="timer" style="font-size: 60px;"></p>
+        <img src="img/0.JPG" alt="">
+        <img src="img/0.JPG" alt="">
+        <img src="img/0.JPG" alt="">
+        <img src="img/0.JPG" alt="">
+        <img src="img/0.JPG" alt="">
+        <img src="img/0.JPG" alt="">
+    </body>
+</html>
