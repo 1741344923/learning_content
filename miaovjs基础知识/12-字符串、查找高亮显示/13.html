@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            var str = 'www.miaov.com';
+
+            console.log( str.split('.') );  // ["www", "miaov", "com"]
+
+            console.log( typeof( str.split('.') ) ); //object
+
+            var arr = str.split('.');
+            console.log( arr.length );// 3
+
+            var arr1  = 'leo';
+            console.log( arr1.split() );//object
+            console.log( typeof( arr1.split() ) ); //object
+            console.log( arr1.split('') ); //["l", "e", "o"]
+
+            var arr2 = '妙味课堂';
+            console.log( arr2.split('味') ); // ["妙", "课堂"]
+
+            var arr3 = '/www.miaov.com/';
+            console.log( arr3.split('/') ); // ["", "www.miaov.com", ""]
+            console.log( arr3.split('/').length );  // 3
+
+            var arr4 = '2018-3-25-23-22';
+            console.log( arr4.split('-') );// ["2018", "3", "25", "23", "22"]
+            console.log( arr4.split('-',3) ); //  ["2018", "3", "25"]
+
+
+        </script>
+    </body>
+</html>

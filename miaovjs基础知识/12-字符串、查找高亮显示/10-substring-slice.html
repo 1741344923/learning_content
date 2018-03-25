@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            var str = '妙味课堂是一支独具特色的IT培训团队';
+
+            console.log( str.substring(0,2) ); // 妙味
+
+            console.log( str.substring(2,0) );
+            // 妙味 可以检测两个数 大的往后仍 小的往前仍
+
+            console.log( str.substring() ); //妙味课堂是一支独具特色的IT培训团队
+            console.log( str.substring(-3,2) );// 妙味 -3当成0来处理
+            console.log( str.substring(2,-3) ); //妙味
+            console.log( str.slice(2,0) );// 妙味
+            console.log( str.slice(0,2) );// 空白 不交换位置
+            console.log( str.slice( -2 ) ); // 团队
+            console.log( str.slice( -4 ) ); // 培训团队
+            console.log( str.slice( -2,-4 ) ); // 培训团队 负数从后面倒着往前数~~
+
+
+        </script>
+    </body>
+</html>
