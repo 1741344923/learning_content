@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+
+            #content{
+                width: 300px;
+                height: 460px;
+                border: 5px solid pink;
+                margin: 50px auto 0;
+                padding: 20px;
+            }
+            #div1{
+                overflow:auto;
+                height: 360px;
+                border: 1px solid #dddddd;
+            }
+            .clearfix:after {
+                content: '';
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+            #div1 .ul .fl{
+                height: 24px;
+                line-height: 24px;
+            }
+            #div1 .ul .fl img{
+                margin-right: 10px;
+                float: left;
+            }
+            #div1 .ul .fr{ line-height: 24px}
+            #div1 .ul .fr img{
+                float: right;
+            }
+            #div1 .ul .fr span{
+                float: right;
+            }
+            #content p{
+                margin-top: 30px;
+                text-align: center;
+            }
+            #content p .text1{
+                margin: 0 10px;
+            }
+            #content p .btn{
+                display: inline-block;
+                width: 36px;
+                height: 26px;
+                line-height: 26px;
+                font-size: 14px;
+            }
+        </style>
+
+        <script>
+            window.onload=function () {
+                var img = document.querySelector('.img');
+                var oBtn = document.querySelector('.btn');
+                var oDiv = document.querySelector('#div1');
+                var oText = document.querySelector('.text1');
+
+                var onOff = true;
+
+
+
+                img.onclick = function () {
+
+                    if ( onOff ){
+                        img.src = 'img/2.png';
+                    }else {
+                        img.src = 'img/1.png';
+                    }
+                    onOff=!onOff;
+                };
+                oBtn.onclick = function () {
+                    if ( onOff ){
+                        oDiv.innerHTML += '<div class="fl clearfix"><img src="img/2.png" alt=""><span>'+oText.value+'</span></div>';
+
+                    }else{
+                        oDiv.innerHTML += '<div class="fr clearfix"><img src="img/1.png" alt=""><span>'+oText.value+'</span></div>';
+
+                    }
+                    onOff=!onOff;
+
+                };
+
+            }
+        </script>
+    </head>
+    <body>
+        <div id="content">
+            <div id="div1">
+                <div class="ul">
+                    <!--<div class="fl clearfix"><img src="img/1.png" alt=""><span>啦啦啦</span></div>
+                    <div class="fr clearfix"><img src="img/2.png" alt=""><span>啦啦啦</span></div>
+                --></div>
+            </div>
+            <p class="p1">
+                <img class="img" src="img/1.png" alt="">
+                <input class="text1" type="text"/>
+                <input class="btn" type="button" value="发送"/>
+            </p>
+        </div>
+    </body>
+</html>

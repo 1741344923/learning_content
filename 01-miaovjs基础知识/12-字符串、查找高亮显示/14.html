@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            div {
+                width: 300px;
+                height: 200px;
+                border: 1px solid #333;
+                background: #fff;
+                padding: 20px;
+                line-height: 40px;
+                word-break: break-all;
+            }
+
+            span {
+                padding: 5px 15px;
+                font-family: "微软雅黑";
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1">
+            <!--<span style="background-color: red">文</span><span style="background-color: pink">字</span><span style="background-color: blue">内</span><span style="background-color: yellow">容</span>-->
+        </div>
+        <input type="text"/>
+        <input type="button" value="按钮"/>
+
+        <script>
+            var oDiv = document.getElementById('div1');
+            var aInput = document.getElementsByTagName('input');
+            var arrColor = ['red', 'pink', 'blue', 'yellow'];
+
+            aInput[1].onclick = function () {
+                var str = aInput[0].value; // '妙味课堂'
+                var arr = str.split(''); // ['妙','味','课','堂']
+
+
+                for (var i = 0; i < arr.length; i++) {
+                    arr[i] = '<span style="background:' + arrColor[i % arrColor.length] + ';">' + arr[i] + '</span>';
+                }
+
+                oDiv.innerHTML += arr.join('');
+
+
+                var arr2 = ['aa','bb','cc'];
+                console.log( arr2.join() ); // aa,bb,cc
+                console.log( typeof( arr2.join() ) ); //string
+                console.log( arr2.join().length ); //8
+                console.log( arr2.join('') ); //aabbcc
+                console.log( arr2.join('-') ); //aa-bb-cc
+            }
+        </script>
+    </body>
+</html>
