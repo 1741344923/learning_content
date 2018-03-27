@@ -3,106 +3,116 @@
     <head>
         <meta charset="UTF-8">
         <title>Title</title>
+        <link rel="stylesheet" href="common.css"/>
         <style>
-
-            #content{
-                width: 300px;
-                height: 460px;
+            .div1{
+                width: 280px;
+                height: 480px;
                 border: 5px solid pink;
                 margin: 50px auto 0;
-                padding: 20px;
+                padding: 10px;
             }
-            #div1{
-                overflow:auto;
-                height: 360px;
-                border: 1px solid #dddddd;
+            .div2{
+                height: 400px;
+                border: 1px solid #cccccc;
+                padding: 10px;
+                overflow: auto;
             }
-            .clearfix:after {
-                content: '';
-                display: block;
-                height: 0;
-                clear: both;
-                visibility: hidden;
+            .div2 div{
+                width: 215px;
+                margin-bottom: 10px;
             }
-            #div1 .ul .fl{
-                height: 24px;
-                line-height: 24px;
-            }
-            #div1 .ul .fl img{
+            .div2 img{
                 margin-right: 10px;
+            }
+            .div2 span{
+                line-height: 24px;
+                font-size: 16px;
+                max-width: 160px;
+            }
+            .div2 .left img{
                 float: left;
             }
-            #div1 .ul .fr{ line-height: 24px}
-            #div1 .ul .fr img{
+            .div2 .left span{
+                float: left;
+                word-break: break-all;
+                background-color: red;
+            }
+            .div2 .right img{
                 float: right;
             }
-            #div1 .ul .fr span{
+            .div2 .right span{
+                width: 180px;
                 float: right;
+                background-color: yellow;
+                margin-right: 10px;
             }
-            #content p{
-                margin-top: 30px;
+            .div3{
+                margin-top: 20px;
                 text-align: center;
             }
-            #content p .text1{
-                margin: 0 10px;
+            .div3 img{
+                vertical-align: middle;
             }
-            #content p .btn{
-                display: inline-block;
-                width: 36px;
-                height: 26px;
-                line-height: 26px;
-                font-size: 14px;
+            .div3 .text1{
+                margin: 0 10px;
             }
         </style>
 
         <script>
-            window.onload=function () {
-                var img = document.querySelector('.img');
-                var oBtn = document.querySelector('.btn');
-                var oDiv = document.querySelector('#div1');
-                var oText = document.querySelector('.text1');
-
+            window.addEventListener('load',function () {
+                var oDiv2 = document.querySelector('.div2');
+                var oImg = document.querySelector('.div3 img');
+                var oText1 = document.querySelector('.div3 .text1');
+                var oBtn = document.querySelector('.div3 .btn');
                 var onOff = true;
 
+                oImg.onclick = function () {
 
-
-                img.onclick = function () {
 
                     if ( onOff ){
-                        img.src = 'img/2.png';
+                        oImg.src = 'img/2.png';
+                        onOff = false;
                     }else {
-                        img.src = 'img/1.png';
+                        oImg.src = 'img/1.png';
+                        onOff = true;
                     }
-                    onOff=!onOff;
                 };
+
+
                 oBtn.onclick = function () {
-                    if ( onOff ){
-                        oDiv.innerHTML += '<div class="fl clearfix"><img src="img/2.png" alt=""><span>'+oText.value+'</span></div>';
 
-                    }else{
-                        oDiv.innerHTML += '<div class="fr clearfix"><img src="img/1.png" alt=""><span>'+oText.value+'</span></div>';
+                    if ( oText1.value.trim()== '' ){
+                        alert( '输入点内容吧傻逼' );
+                    }else {
+                        if ( onOff ){
+                            oDiv2.innerHTML += '<div class="left clearfix"><img src="img/1.png" alt=""/><span>'+oText1.value+'</span></div>';
+                        }else {
+                            oDiv2.innerHTML += '<div class="right clearfix"><img src="img/2.png" alt=""/><span>'+oText1.value+'</span></div>';
+                        }
 
+                        oText1.value = '';
                     }
-                    onOff=!onOff;
 
-                };
+                }
 
-            }
+
+            });
+
+
         </script>
     </head>
     <body>
-        <div id="content">
-            <div id="div1">
-                <div class="ul">
-                    <!--<div class="fl clearfix"><img src="img/1.png" alt=""><span>啦啦啦</span></div>
-                    <div class="fr clearfix"><img src="img/2.png" alt=""><span>啦啦啦</span></div>
-                --></div>
+        <div class="div1">
+            <div class="div2">
+                <!--<div class="left clearfix"><img src="img/1.png" alt=""/><span>你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好</span></div>
+                <div class="right clearfix"><img src="img/2.png" alt=""/><span>你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好</span></div>-->
             </div>
-            <p class="p1">
-                <img class="img" src="img/1.png" alt="">
+            <div class="div3">
+                <img src="img/1.png" alt=""/>
                 <input class="text1" type="text"/>
                 <input class="btn" type="button" value="发送"/>
-            </p>
+            </div>
         </div>
     </body>
 </html>

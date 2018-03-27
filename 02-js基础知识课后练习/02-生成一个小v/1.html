@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            #btn{
+                width: 50px;
+                height: 30px;
+                margin-bottom: 30px;
+            }
+            #content{
+                width: 500px;
+                height: 500px;
+                border: 1px solid #000;
+                position: relative;
+            }
+            #content div{
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background: pink;
+                font-size: 30px;
+                line-height: 100px;
+                color: #ffffff;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="button" value="点击" id="btn"/>
+        <div id="content">
+            <!--<div style="left: 0; top: 0;">0</div>
+            <div style="left: 100px; top: 100px;">1</div>
+            <div style="left: 200px; top: 200px;">2</div>
+            <div style="left: 300px; top: 100px;">3</div>
+            <div style="left: 400px; top: 0;">4</div>-->
+        </div>
+
+        <script>
+            /*
+                i left top
+                0 0px     0px
+                1 100px   100px
+                2 200px     200px
+                3 300px     100px
+                4 400px     0
+                left = i*100
+                如果i<=2
+                    top = i*100
+                否则 top = 400-i*100
+            */
+            var Btn = document.getElementById('btn');
+            var  oContent  = document.getElementById('content');
+            var str = '';
+
+            Btn.onclick = function () {
+                for ( var i=0;i<5;i++ ){
+                    str += '<div style="left:0;top:0;">'+i+'</div>';
+                }
+                oContent.innerHTML = str;
+            }
+        </script>
+    </body>
+</html>
