@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Title</title>
+        <link rel="stylesheet" href="../common.css"/>
         <style>
             #btn{
                 width: 50px;
@@ -53,10 +54,19 @@
             var Btn = document.getElementById('btn');
             var  oContent  = document.getElementById('content');
             var str = '';
+            var l = 0;
+            var t = 0;
 
             Btn.onclick = function () {
                 for ( var i=0;i<5;i++ ){
-                    str += '<div style="left:0;top:0;">'+i+'</div>';
+                    l = i*100;
+                    if ( i <= 2 ){
+                        t = i*100;
+                    }else {
+                        t = 400 - i*100;
+                    }
+
+                    str += '<div style="left:'+l+'px;top:'+t+'px;">'+i+'</div>';
                 }
                 oContent.innerHTML = str;
             }

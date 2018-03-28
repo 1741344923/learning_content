@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <!--
+
+            回顾javascript的组成
+            javascript由三部分组成
+            ECMAscript(javascript核心标准,也是一个解析器)
+            DOM(通过document提供的一些方法或者属性来操作页面)
+            BOM(通过window提供的一些方法或者属性来操作浏览器)
+
+            DOM (Document Object Model)
+            文档 对象 模型
+            整个页面文档
+            官方解释:
+            是W3C组织推荐的处理可扩展标志语言的标准编程接口，在网页上组织页面（或文档）的对象
+            被组织在一个树形结构中，用来表示文档中对象的标准模型就称为DOM
+            简单点来说：
+            DOM通过document提供一些能够操作页面内容的属性或者方法，赋予开发者操作页面的能力。
+            例如: document.getElementById()...
+
+            document提供了一些API(接口),赋予开发者操作页面的能力
+
+            -->
+    </head>
+    <body>
+        <div id="div1"></div>
+        <script>
+            var div = document.getElementById('div1');
+
+            div.style.cssText = 'width:100px; height:100px; background-color:red;';
+        </script>
+    </body>
+</html>
