@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <ul id="ul">
+            <li>11</li>
+            <li>22</li>
+            <li>33</li>
+        </ul>
+
+        <script>
+            /*
+                找到某个元素的下个兄弟节点
+                nextElementSibling
+
+                找到某个元素的上个兄弟节点
+                previousElementSibling
+            */
+            var oUl = document.getElementById('ul');
+            var aLi = oUl.children;
+            aLi[0].nextElementSibling.style.background = 'red';
+
+            console.log( aLi[0] );//找到第一个li
+            console.log( aLi[0].nextElementSibling ); // <li>22</li>
+            console.log( aLi[0].nextElementSibling.nextElementSibling );//<li>33</li>
+            console.log( aLi[1].previousElementSibling.previousElementSibling )// null
+            aLi[1].previousElementSibling.style.background = 'yellow';
+        </script>
+    </body>
+</html>

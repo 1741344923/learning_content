@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            /*div{
+                padding: 100px;
+            }*/
+            #div1{
+                background-color: red;
+                position: relative;
+                width: 100px;
+                height: 100px;
+                margin-left: 50px;
+            }
+            #div2{
+                background-color: blue;
+                position: relative;
+                width: 60px;
+                height: 60px;
+                top: 20px;
+                left: 30px;
+            }
+            #div3{
+                width: 30px;
+                height: 30px;
+                background-color: yellow;
+                position: absolute;
+                left: 20px;
+                top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="button" id="btn" value="点击就走"/>
+        <div id="div1">
+            <div id="div2">
+                <div id="div3"></div>
+            </div>
+        </div>
+
+        <script>
+            /* 需求：当点击按钮的时候，将div3的距离移动到最左边
+
+                分析: 从div3开始查找他的定位父级的左距离 20
+                     从div2到div1的左距离 30
+                     div到body的左距离 50
+
+                     100
+            */
+            var odiv3 = document.getElementById('div3');
+            var btn = document.getElementById('btn');
+        </script>
+    </body>
+</html>

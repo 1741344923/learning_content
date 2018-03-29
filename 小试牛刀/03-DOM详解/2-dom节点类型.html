@@ -5,7 +5,9 @@
         <title>Title</title>
     </head>
     <body>
-        <div id="div1"></div>
+        <div id="div1"><!--这是一个注释-->
+            123456
+        </div>
         <ul>
             <li>
                 <span></span>
@@ -31,8 +33,24 @@
 
             var str = '',
 
-            元素节点:
-                数字1
+            元素节点  数字1
+
+            文本节点
+                数字3
+                文字、换行......
+
+            注释节点 数字8
+
+            属性节点 数字2
+
+            document 数字9
+
+             nodeValue 查看节点的属性值
+
+             nodeName 查看节点的属性名
+
+            childNodes (类数字)
+             获取某个节点下的所有子节点
             */
 
 
@@ -41,6 +59,15 @@
 
             var div = document.getElementById('div1');
             console.log( div.nodeType ); // 10
+            console.log( document.nodeType ); //9
+            console.log( div.childNodes ); //NodeList [text]
+            console.log( div.childNodes[0] ); //"123456"
+            console.log( div.childNodes[0].nodeType );//3
+            console.log( div.attributes[0] ); // id="div1"
+            console.log( div.attributes[0].nodeType );//2
+            console.log( div.attributes[0].nodeValue );//div1
+            console.log( div.attributes[0].nodeName );// id
+            console.log( div.childNodes[0].nodeValue ); // 这是一个注释
         </script>
     </body>
 </html>

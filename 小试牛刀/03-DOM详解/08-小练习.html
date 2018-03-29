@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            ul {
+                width: 200px;
+            }
+
+            ul li {
+                color: #666;
+                background-color: #eee;
+                font-weight: bold;
+                font-size: 14px;
+                height: 30px;
+                line-height: 30px;
+                padding: 0 20px;
+                list-style: none;
+            }
+
+            ul .focus {
+                font-size: 22px;
+                background-color: #555;
+                color: #ffffff;
+            }
+
+            ul .near {
+                font-size: 18px;
+                background-color: #ccc;
+                color: blue;
+            }
+
+            ul .none {
+                background-color: #333;
+                color: #ffffff;
+            }
+
+            ul .side {
+                background: orange;
+            }
+        </style>
+
+        <script>
+            window.addEventListener('load', function () {
+                var oUl = document.getElementById('ul1');
+                var aLi = oUl.children;
+                var first = oUl.firstElementChild;
+                var last = oUl.lastElementChild;
+
+                for (var i = 0; i < aLi.length; i++) {
+                    aLi[i].onmouseover = function () {
+                        if (this == first || this == last) {
+                            this.className = 'side';
+                        } else {
+                            this.className = 'focus';
+
+                            this.previousElementSibling.className = this.nextElementSibling.className = 'near';
+                            first.className = last.className = 'none';
+
+                            /*this.previousElementSibling.className = 'near';
+                             this.nextElementSibling.className = 'near';
+                             first.className = 'none';
+                             last.className = 'none';*/
+                        }
+                    };
+
+                    aLi[i].onmouseout = function () {
+                        for (var i = 0; i < aLi.length; i++) {
+                            aLi[i].className = '';
+                        }
+                        //first.className = 'none';
+                        //last.className = 'none';
+                        first.className = last.className = 'none';
+                    }
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <ul id="ul1">
+            <li class="none">这是首行</li>
+            <li>111111</li>
+            <li>222222</li>
+            <li>333333</li>
+            <li>444444</li>
+            <li>555555</li>
+            <li>666666</li>
+            <li>777777</li>
+            <li>111111</li>
+            <li>222222</li>
+            <li>333333</li>
+            <li>444444</li>
+            <li>555555</li>
+            <li>666666</li>
+            <li class="none">这是末行</li>
+        </ul>
+    </body>
+</html>
