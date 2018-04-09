@@ -53,8 +53,20 @@
 
                      100
             */
-            var odiv3 = document.getElementById('div3');
+            var div3 = document.getElementById('div3');
             var btn = document.getElementById('btn');
+
+            btn.onclick = function () {
+                var left = 0;
+                var elem = div3;
+
+                while ( elem ){ // 如果有这个元素就会走循环
+                    left += elem.offsetLeft;
+                    elem = elem.offsetParent; // 第一次计算之后，elem就成了div2
+                    alert( left );
+                    alert( elem.tagName );
+                }
+            }
         </script>
     </body>
 </html>

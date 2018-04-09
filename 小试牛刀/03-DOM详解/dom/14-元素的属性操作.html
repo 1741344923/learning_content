@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <!--
+            元素的属性操作:
+            getAttribute(attr)获取元素指定属性名的属性值
+            setAttribute(attr.value) 设置元素指定属性名的属性值
+            removeAttribute(attr) 删除元素指定属性
+            特点: 可以操作行间自定义的属性
+                可以获取src href等的相对地址
+        -->
+
+        <div id="div1" index="2"></div>
+
+        <script>
+            var oDiv = document.getElementById('div1');
+            oDiv.index = 1;
+
+            console.log(oDiv.id);// div1
+            console.log( oDiv['id'] );//div1
+
+            // 获取元素行间的属性
+            // elem.getAttribute('');
+            console.log( oDiv.getAttribute('id') );
+
+            console.log( oDiv.index );//1
+            console.log( oDiv.getAttribute('index') );// null
+
+
+
+            // 设置元素的行间属性 setAttribute('','');
+            oDiv.setAttribute('index','3');//
+
+
+            oDiv.removeAttribute('index');// 删除元素的行间属性
+        </script>
+    </body>
+</html>

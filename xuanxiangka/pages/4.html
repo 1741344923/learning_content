@@ -55,46 +55,59 @@
         </style>
 
         <script>
+            /*window.addEventListener('load',function () {
+                var aBtn = document.querySelectorAll('.div1 .hd li');
+                var aImg = document.querySelectorAll('.div1 .bd ul li');
 
-            /*$(function () {
-             $('.div1 .hd li').on('click',function () {
-             var s = $(this).index();
-             // $(this) 表示当前点击的那个按钮   nowIndex表示当前按钮的索引
-             $(this)
-             .addClass('active')
-             .siblings()
-             .removeClass('active');
-             // 给当前点击的那个按钮加class on   并且移除他兄弟的class on
-             $('.div1 .bd ul li')
-             .eq(s)
-             .addClass('on')
-             .siblings()
-             .removeClass('on');
-             // 给当前那个按钮对应的那一个的切换加on显示。。应让他的兄弟移除on消失
-             })
-             });*/
-
-
-            window.addEventListener('load', function () {
-                var aBtn = document.querySelectorAll('.div1 .hd li'); // 按钮
-                var aImg = document.querySelectorAll('.div1 .bd ul li'); // 切换
-
-                for (var i = 0; i < aBtn.length; i++) {
-                    // 循环给按钮加事件
-                    aBtn[i].index = i; //加索引
-                    aBtn[i].addEventListener('click', function () {// 点击的时候先清空按钮的on和切换的on
-                        for (var i = 0; i < aBtn.length; i++) {
+                for ( var i=0;i<aBtn.length;i++ ){
+                    aBtn[i].index = i;
+                    aBtn[i].addEventListener('click',function () {
+                        for ( var i=0;i<aBtn.length;i++ ){
                             aBtn[i].classList.remove('active');
                             aImg[i].classList.remove('on');
                         }
-                        this.classList.add('active'); //当前按钮加on
+                        this.classList.add('active');
                         var s = this.index;
-                        aImg[s].classList.add('on'); //对应的切换加on
+                        aImg[s].classList.add('on');
                     })
                 }
-            });
+            });*/
 
+            /*window.addEventListener('load',function () {
+                var aBtn = document.querySelectorAll('.div1 .hd li');
+                var aImg = document.querySelectorAll('.div1 .bd ul li');
 
+                for ( var i=0;i<aBtn.length;i++ ){
+                    aBtn[i].index = i;
+                    aBtn[i].addEventListener('click',function () {
+                        for ( var i=0;i<aBtn.length;i++ ){
+                            aBtn[i].classList.remove('active');
+                            aImg[i].classList.remove('on');
+                        }
+                        this.classList.add('active');
+                        var s = this.index;
+                        aImg[s].classList.add('on');
+                    })
+                }
+            });*/
+
+            window.addEventListener('load',function () {
+                var aBtn = document.querySelectorAll('.div1 .hd li');
+                var aImg = document.querySelectorAll('.div1 .bd ul li');
+
+                for ( var i=0;i<aBtn.length;i++ ){
+                    aBtn[i].index = i;
+                    aBtn[i].addEventListener('click',function () {
+                        for ( var i=0;i<aBtn.length;i++ ){
+                            aBtn[i].classList.remove('active');
+                            aImg[i].classList.remove('on');
+                        }
+                        this.classList.add('active');
+                        var s = this.index;
+                        aImg[s].classList.add('on');
+                    })
+                }
+            })
         </script>
 
     </head>
