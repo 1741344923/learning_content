@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            var json = { name:'leo',age:32 };
+
+            console.log( json.name ); //leo
+
+            var arrUl = ['../image/1.jpg', '../image/2.jpg', '../image/3.jpg', '../image/4.jpg'];
+
+            var arrText = ['第一张', '第二张', '第三张', '第四张'];
+
+            var s = {
+                url:['../image/1.jpg','../image/2.jpg','../image/3.jpg','../image/4.jpg'],
+                text:['第一张', '第二张', '第三张', '第四张']
+            };
+
+
+
+            console.log( s.url );
+
+            var json2 = {name:'miaov'};
+            var json2 = {'name':'miaov'};
+
+            console.log( json2.name );
+            console.log( json2['name'] );
+            json2.name = '妙味';
+            //json2['name'] = 'miav';
+            console.log( json2.name );
+
+
+            var json3 = {abc:123,xyz:''};
+            var arr = [{'name':'TM','age':23},{'name':'leo','age':32}]; // TM
+            console.log( arr[0].name+'今年有'+ arr[1]['age'] );//TM今年有32
+
+
+            var json4 = { 'name':'miav','age':3,'fun':'前端开发'};
+
+            for ( var attr in json4 ){
+                //console.log( attr ); // name age fun
+
+                console.log( json4[attr] ); //miav 3 前端开发
+            }
+
+            var json5 = {
+                'url':['../image/1.jpg','../image/2.jpg','../image/3.jpg','../image/4.jpg'],
+                'text':['第一张', '第二张', '第三张', '第四张']
+            };
+
+            for ( var attr in json5 ){
+                for ( var i=0;i<json5[attr].length;i++ ){
+                    alert( json5[attr][i] );
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <img src="../image/1.jpg" alt="">
+    </body>
+</html>

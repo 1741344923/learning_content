@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            var arr = ['TM','忠义','张森','杜鹏','leo'];
+
+            // 删除 替换 添加
+            //arr.splice(0,2); // ["张森", "杜鹏", "leo"]
+
+            // ["莫涛", "忠义", "张森", "杜鹏", "leo"]
+            //arr.splice(0,1,'莫涛');
+
+            //["莫涛 or 忠义", "忠义", "张森", "杜鹏", "leo"]
+            arr.splice(0,1,'莫涛 or 忠义');
+
+            //  ["莫涛 or 忠义", "忠义媳妇儿~", "忠义", "张森", "杜鹏", "leo"]
+            arr.splice(1,0,'忠义媳妇儿~');
+
+
+            console.log( arr );
+        </script>
+    </body>
+</html>

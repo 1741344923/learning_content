@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            var str = '妙味课堂-WWW.Miaov.com';
+
+            console.log( str.charAt(1) ); // '味'
+
+            console.log( str.charCodeAt(1) );//21619
+
+            console.log( typeof(String.fromCharCode(22937,21619))); //string '妙味'
+
+            console.log( str.indexOf('m',3) );// 9
+
+            console.log( str.lastIndexOf('o') );//16
+
+            console.log( '1000'<'2' ); //true
+            console.log( '1000'>2 ); // true
+
+            console.log( typeof(str.substring(0,4)) ); //'妙味课堂'
+
+            console.log( typeof(str.slice(-3)) ); // 'com'
+
+            console.log( typeof( str.toUpperCase() ));// 妙味课堂-WWW.MIAOV.COM
+
+            console.log( str.toLowerCase() );// 转成小写的意思
+
+            console.log( str.split('.',2) ); // 妙味课堂-WWW,Miaov
+
+            var arr = ['www','miaov','com'];
+
+            console.log( arr.join('.') ); // www.miaov.com
+
+        </script>
+    </body>
+</html>
