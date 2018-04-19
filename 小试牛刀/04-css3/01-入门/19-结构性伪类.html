@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            p {
+                height: 30px;
+                border: 1px solid #000000;
+            }
+            span{
+                display: block;
+                height: 20px;
+            }
+
+            p *:only-of-type{
+                background-color: coral;
+            }
+
+            p *:only-child{
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <p></p>
+        <h1>h1</h1>
+        <p></p>
+        <h2>h2</h2>
+        <p>
+            <span></span>
+        </p>
+        <h3>h3</h3>
+        <p>
+            <span></span>
+            <a href="">链接</a>
+        </p>
+        <p>p5</p>
+    </body>
+</html>

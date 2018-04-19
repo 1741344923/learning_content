@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            .box{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                /*transition: 3s width;*/
+                /*transition: 3s width ease;*/
+                /*transition: 3s width ease-in;*/ /*越来越快*/
+                /*transition: 5s width ease-out;*/
+                transition: 5s width ease-in-out;
+            }
+            .box:hover{
+                width: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+    </body>
+</html>

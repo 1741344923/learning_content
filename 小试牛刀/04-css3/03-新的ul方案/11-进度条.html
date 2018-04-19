@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            #div1{
+                width: 200px;
+                height: 30px;
+                overflow: hidden;
+                border: 1px solid #000000;
+            }
+            .box{
+                width: 400px;
+                height: 30px;
+                border: 1px solid #000000;
+                background: -webkit-repeating-linear-gradient(15deg,green 0, green 10px,#fff 10px,#ffffff 20px);
+                transition: 3s;
+            }
+            #div1:hover .box{
+                margin-left: -100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1">
+            <div class="box"></div>
+        </div>
+    </body>
+</html>

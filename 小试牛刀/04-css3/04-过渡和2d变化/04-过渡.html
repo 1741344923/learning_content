@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            .box{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                transition: 1s width;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box" id="box"></div>
+
+        <script>
+            var oBox = document.getElementById('box');
+
+            oBox.onclick = function () {
+                this.style.width = this.offsetWidth+100+'px';
+            };
+
+            addEnd(oBox,function () {
+                alert("end");
+            });
+
+            function addEnd(obj,fn) {
+                obj.addEventListener('webkitTransitionEnd',fn,false);
+                obj.addEventListener('transition',fn,false);
+            }
+        </script>
+    </body>
+</html>
