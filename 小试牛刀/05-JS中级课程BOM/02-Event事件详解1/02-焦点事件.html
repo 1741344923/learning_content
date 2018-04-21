@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            window.addEventListener('load',function () {
+                var oText = document.querySelector('#text1');
+
+                // onfocus 事件在对象获得焦点时发生。
+                // 当元素获取到焦点的时候触发
+
+                oText.onfocus = function () {
+                    if ( this.value == '请输入内容' ){
+                        this.value = '';
+                    }
+                };
+
+
+                //onblur: 当元素失去焦点的时候触发
+
+                oText.onblur = function () {
+                    if ( this.value == '' ){
+                        this.value = '请输入内容';
+                    }
+                };
+
+
+                /*
+                obj.focus() 给指定的元素设置焦点
+                obj.blur() 取消指定元素的焦点 方法用于从单选按钮上移开焦点。
+                obj.select() 方法用于选取文本域中的内容。
+                */
+
+                oText.focus();
+
+
+                var oBtn = document.getElementById('btn');
+                oBtn.onclick = function () {
+                    oText.select();
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <input type="text" id="text1" value="请输入内容"/>
+        <input type="button" value="全选" id="btn"/>
+    </body>
+</html>

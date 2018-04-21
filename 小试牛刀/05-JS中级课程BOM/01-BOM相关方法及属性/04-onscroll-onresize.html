@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /*onscroll 当滚动条滚动的时候触发
+            onresize 当窗口大小发生改变的时候触发*/
+
+            var i = 0;
+
+            //onscroll 事件在元素滚动条在滚动时触发。
+            window.onscroll = function () {
+                document.title = i++;
+            };
+
+
+            //onresize 事件会在窗口或框架被调整大小时发生。
+            window.onresize = function () {
+                document.title = i++;
+            }
+        </script>
+    </head>
+    <body style="height: 2000px;">
+        
+    </body>
+</html>

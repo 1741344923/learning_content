@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /*
+             BOM Browser Object Model 浏览器对象模型
+
+             open(页面的地址url，打开的方式) 方法 打开一个新窗口
+             如果url为空，默认打开一个空白页面、
+             如果打开方式为空，新窗口方式打开
+
+
+             close() 方法 关闭窗口
+                1、火狐：默认无法关闭
+                2、谷歌：直接关闭
+                3、ie : 询问用户
+
+             */
+
+            window.addEventListener('load', function () {
+                var Btn = document.getElementsByTagName('input');
+                var opn = null;
+
+
+                Btn[0].onclick = function () {
+                    // 新窗口的方式打开一个空白页面
+                    //window.open();
+
+                    // 新窗口的方式打开百度
+                    //window.open('https://www.baidu.com');
+
+                    // 本窗口打开百度
+                    // 返回值：返回新打开的窗口的window对象
+                    //window.open('https://www.baidu.com','_self');
+
+
+                    opn = window.open();
+                    //alert( opn ); // [object Window]
+                    //alert( opn == window ); // false
+                    //opn.document.body.style.background = 'red';
+                };
+
+
+                Btn[1].onclick = function () {
+                    window.close(); // 关闭当前窗口
+                };
+
+                Btn[2].onclick = function () {
+                    // 可以关闭在本窗口中通过js方法打开的新窗口
+                    opn.close(); //关闭新打开的窗口
+                }
+            });
+
+
+        </script>
+    </head>
+    <body>
+        <input type="button" value="打开一个新窗口"/>
+        <input type="button" value="关闭窗口"/>
+        <input type="button" value="关闭新窗口"/>
+    </body>
+</html>
