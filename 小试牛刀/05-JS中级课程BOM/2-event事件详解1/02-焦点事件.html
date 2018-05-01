@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            window.addEventListener('load',function () {
+                var oText = document.querySelector('#text1');
+
+                // onfocus : 当元素获取到焦点的时候触发
+
+                oText.onfocus = function () {
+                    this.value = '';
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <input type="text" id="text1" value="请输入内容"/>
+    </body>
+</html>

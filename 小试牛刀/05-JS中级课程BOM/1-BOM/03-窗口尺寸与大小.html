@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            window.addEventListener('load',function () {
+
+                /*
+                可视区的尺寸
+                document.documentElement.clientWidth  可视区的宽度
+                document.documentElement.clientHeight 可视区的高度
+                */
+
+                // 可视区的宽度 1350
+                //console.log( document.documentElement.clientWidth );
+
+                // 可视区的高度
+                //console.log( document.documentElement.clientHeight );
+
+                document.onclick = function () {
+                    //滚动条滚动距离
+                    //document.documentElement.scrollTop;
+                    //document.documentElement.scrollLeft;
+                    //document.body.scrollTop;
+                    //document.body.scrollLeft;
+                    //Div.scrollTop
+
+                    //alert( document.documentElement.scrollTop );
+                    //alert( document.body.scrollTop );
+
+                    var sop = document.documentElement.scrollTop || document.body.scrollTop;
+
+                    //alert( sop );
+                    //内容宽 oDiv,scrollWidth
+                    //内容高 oDiv.scrollHeight
+                    //alert( document.getElementById('div1').scrollHeight );
+
+                    // 文档高度
+                    //alert( document.documentElement.offsetHeight );
+
+                    alert( document.body.offsetHeight );
+                }
+            })
+        </script>
+    </head>
+    <body style="height: 2000px; margin: 0;">
+        <div id="div1" style="width: 100px;height: 100px;border: 1px solid red; padding: 10px; margin: 10px;">
+            <div style="width: 100px;height: 200px;background-color: blue;"></div>
+        </div>
+    </body>
+</html>
