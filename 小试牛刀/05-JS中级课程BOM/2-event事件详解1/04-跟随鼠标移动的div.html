@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            #div1{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: absolute;
+            }
+        </style>
+
+        <script>
+            window.addEventListener('load',function () {
+                // onmousemove 事件会在鼠标指针移动时发生。
+                // 触发频率不是像素，而是间隔时间，在一个指定时间内(很短)，
+                // 如果鼠标的位置和上一次的位置发生了变化，就会触发一次
+
+                var i = 0;
+
+                var oDiv = document.querySelector('#div1');
+
+                document.onmousemove = function (ev) {
+                    //document.title = i++;
+
+                    ev = ev || event;
+
+                    var scro = document.documentElement.scrollTop || document.body.scrollTop;
+
+                    oDiv.style.left = ev.clientX + 'px';
+                    oDiv.style.top = ev.clientY + 'px';
+                }
+            });
+        </script>
+    </head>
+    <body style=" height: 2000px;">
+        <div id="div1"></div>
+    </body>
+</html>

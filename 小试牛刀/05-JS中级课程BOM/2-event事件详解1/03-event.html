@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            /*
+            event : 事件对象 当一个事件发生的时候，和当前这个对象发生
+            的这个事件有关的一些详细的信息都会被临时保存到一个指定的地方
+            -event对象
+
+
+             事件对象必须在一个事件调用的函数里面使用才有内容
+             事件函数: 事件调用的函数，一个函数是不是事件函数，不在定义的时候决定，
+             而是取决于调用的时候！
+
+             Event 对象 官方解释：
+             Event 对象代表事件的状态，比如事件在其中发生的元素、
+             键盘按键的状态、鼠标的位置、鼠标按钮的状态。
+
+             事件通常与函数结合使用，函数不会在事件发生前被执行！
+
+
+             兼容
+             ie/谷歌 : event 是一个内置全局对象
+             标准下: 事件对象是通过事件函数的第一个参数传入
+
+
+             如果一个函数是被事件调用的，这个函数定义的第一个参数就是事件对象
+
+             clientX clientY 当一个事件发生的时候，鼠标到页面可视区的距离
+            */
+
+            //alert( event ); //undefined
+
+            function fn1(ev) {
+                //alert( event );
+                //alert( ev );
+                ev = ev || event;
+                //alert( ev );
+
+                /*for ( var attr in ev ){
+                    console.log( attr + '=' + ev[attr] );
+                }*/
+
+                alert( ev.clientX );
+            }
+            //fn1(); // undefined 不是事件调用的函数
+
+            // [object MouseEvent] 对象 鼠标事件
+            document.onclick = fn1; //是事件调用的函数，所以event有内容
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

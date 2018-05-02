@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            #div1{
+                width: 100px;
+                height: 200px;
+                border: 1px solid #000;
+                display: none;
+            }
+        </style>
+        <!--
+            阻止冒泡: 当前要阻止冒泡的事件函数中调用 event.cancelBubble = true;
+        -->
+        <script>
+            window.addEventListener('load',function () {
+                var Btn = document.querySelector('#btn');
+                var Div = document.querySelector('#div1');
+
+                Btn.addEventListener('click',function (ev) {
+                    ev = ev || event;
+                    ev.cancelBubble = true; //阻止当前对象的当前事件的冒泡
+
+                    Div.style.display = 'block';
+                });
+
+
+                /*Btn.addEventListener('mouseover',function (ev) {
+                    ev = ev || event;
+                    ev.cancelBubble = true;
+                });*/
+
+                document.addEventListener('click',function () {
+                    /*setTimeout(function () {
+                        Div.style.display = 'none';
+                    },1000);*/
+
+                    Div.style.display = 'none';
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <input type="button" value="按钮" id="btn"/>
+        <div id="div1"></div>
+
+        <p>pppppp</p>
+        <p>pppppp</p>
+        <p>pppppp</p>
+        <p>pppppp</p>
+    </body>
+</html>
