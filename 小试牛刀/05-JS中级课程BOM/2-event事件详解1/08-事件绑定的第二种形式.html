@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script>
+            //给一个对象绑定一个事件处理函数的第一种形式
+            //obj.onclick = fn1;
+            function fn1() {
+                alert(1);
+            }
+
+            function fn2() {
+                alert(2);
+            }
+
+            //document.onclick = fn1;
+            //document.onclick = fn2; // 会覆盖前面绑定的fn1
+
+            // 给一个对象的同一个事件绑定多个不同的函数
+            // 给一个元素绑定事件函数的第二种形式
+
+            /*
+                IE : obj.attachEvent(事件名称，事件函数);
+                标准 : obj.addEventListener(事件名称，事件函数，是否捕获);
+            */
+
+            /*document.attachEvent('onclick',fn1);
+            document.attachEvent('onclick',fn2);*/
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
