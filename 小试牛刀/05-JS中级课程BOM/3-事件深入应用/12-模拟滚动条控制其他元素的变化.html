@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            #div1{
+                width: 30px;
+                height: 500px;
+                background-color: black;
+                position: absolute;
+                left: 10px;
+                top: 10px;
+            }
+            #div2{
+                width: 30px;
+                height: 30px;
+                background-color: red;
+                position: absolute;
+                left: 0;
+                top: 0;
+
+            }
+
+            #div3{
+                width: 500px;
+                height: 0;
+                background-color: pink;
+                position: absolute;
+                left: 50px;
+                top: 10px;
+            }
+        </style>
+
+        <script>
+            window.onload = function () {
+                var Div1 = document.getElementById('div1');
+                var Div2 = document.getElementById('div2');
+                var Div3 = document.getElementById('div3');
+
+                var iMaxTop = Div1.offsetHeight - Div2.offsetHeight;
+
+                Div2.onmousedown = function (ev) {
+
+                    ev = ev || event;
+
+                    var disY = ev.clientY - this.offsetTop;
+
+                    document.onmousemove = function (ev) {
+
+                        ev = ev || event;
+
+                        var T = ev.clientY - disY;
+
+                        if ( T < 0 ){
+                            T = 0;
+                        }else if( T > iMaxTop ){
+                            T = iMaxTop;
+                        }
+
+                        Div2.style.top = T + 'px';
+
+                        var iScale = T / iMaxTop;
+
+                        document.title = iScale;
+
+                        Div3.style.height = 500 * iScale + 'px';
+                    };
+
+                    document.onmouseup = function () {
+                        document.onmousemove = document.onmouseup = null;
+                    };
+
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="div1">
+            <div id="div2"></div>
+        </div>
+        <div id="div3"></div>
+    </body>
+</html>

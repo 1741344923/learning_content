@@ -5,7 +5,29 @@
         <title>Title</title>
         <script>
             window.addEventListener('load',function () {
-                
+                var oText = document.querySelector('#text1');
+                var oUl = document.querySelector('#ul1');
+
+                oText.onkeyup = function ( ev ) {
+
+                    ev = ev || event;
+
+                    //alert( this.value );
+
+                    if ( this.value != '' ){
+
+                        if ( ev.keyCode == 13 && ev.ctrlKey ){
+                            var oLi = document.createElement('li');
+                            oLi.innerHTML = this.value;
+
+                            if ( oUl.children[0] ){
+                                oUl.insertBefore(oLi,oUl.children[0] );
+                            }else {
+                                oUl.appendChild( oLi );
+                            }
+                        }
+                    }
+                }
             })
         </script>
     </head>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            #div1{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: absolute;
+                left: 500px;
+                top: 200px;
+            }
+        </style>
+
+        <script>
+            window.onload = function () {
+                var Div  = document.getElementById('div1');
+
+                Div.onmousedown = function (ev) {
+
+                    ev = ev || event;
+
+                    var disW = this.offsetWidth;
+                    var disX = ev.clientX;
+                    var disL = this.offsetLeft;
+
+                    var b = '';
+
+                    if ( disX > disL + disW -10 ){
+                        //alert( 'right' );
+                        b = 'right';
+                    }
+
+                    if ( disX < disL + 10 ){
+                        //alert( 'left' );
+                        b = 'left';
+                    }
+
+                    document.onmousemove = function (ev) {
+
+                        ev = ev || event;
+
+                        switch (b){
+                            case 'left':
+                                Div.style.width = disW - ( ev.clientX - disX ) + 'px';
+
+                                Div.style.left = disL + ( ev.clientX - disX ) + 'px';
+                                break;
+
+                            case 'right':
+                                Div.style.width = disW + ( ev.clientX - disX )+'px';
+                                break;
+                        }
+                    };
+
+                    document.onmouseup = function () {
+                        document.onmousemove = document.onmouseup = null;
+                    };
+
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="div1"></div>
+    </body>
+</html>

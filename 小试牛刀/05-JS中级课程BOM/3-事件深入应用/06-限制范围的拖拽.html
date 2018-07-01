@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            #div1 {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: absolute;
+            }
+            #img1{
+                position: absolute;
+            }
+        </style>
+
+        <script>
+            window.onload = function () {
+
+
+                var Div = document.getElementById('div1');
+                var Img = document.getElementById('img1');
+
+                s(Img);
+                s(Div);
+
+                function s(obj) {
+                    obj.onmousedown = function (ev) {
+
+                        ev = ev || event;
+
+                        var disX = ev.clientX - this.offsetLeft;
+                        var disY = ev.clientY - this.offsetTop;
+
+                        if ( obj.setCapture ){
+                            obj.setCapture();
+                        }
+
+                        document.onmouseover = function (ev) {
+                            ev = ev || event;
+
+                            var L = ev.clientX - disX;
+                            var T = ev.clientY - disY;
+
+                            if ( L<0 ){
+                                L = 0;
+                            }else if( L > document.documentElement.clientWidth - obj.offsetWidth ){
+                                L = document.documentElement.clientWidth - obj.offsetWidth;
+                            }
+
+                            if ( T<0 ){
+                                T=0;
+                            }else if( T>document.documentElement.clientHeight - obj.offsetHeight ){
+                                T = document.documentElement.clientHeight - obj.offsetHeight;
+                            }
+
+                            obj.style.left = L + 'px';
+                            obj.style.top = T + 'px';
+                        };
+
+                        document.onmouseup = function () {
+                            document.onmouseover = document.onmouseup = null;
+
+                            // 释放全局捕获 releaseCapture();
+                            if ( obj.releaseCapture ){
+                                obj.releaseCapture();
+                            }
+                        };
+
+                        return false;
+                    }
+                }
+
+            };
+
+        </script>
+    </head>
+    <body>
+        <div id="div1"></div>
+        <img src="../image/1.jpg" id="img1" alt="">
+    </body>
+</html>
