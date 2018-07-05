@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            body{
+                margin: 0;
+            }
+            .coWidth{
+                width: 900px;
+                margin: 0 auto;
+            }
+            #header{
+                height: 100px;
+                background-color: #ff99cc;
+            }
+            #section{
+                height: 500px;
+                background-color: #99ccff;
+            }
+            #section1{
+                width: 100%;
+                float: left;
+            }
+            #content{
+                height: 500px;
+                margin: 0 200px;
+            }
+            #left{
+                width: 200px;
+                height: 100%;
+                background-color: yellowgreen;
+                float: left;
+                margin-left: -100%;
+            }
+            #right{
+                width: 200px;
+                height: 100%;
+                background-color: yellowgreen;
+                float: left;
+                margin-left: -200px;
+            }
+            #footer{
+                height: 80px;
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header" class="coWidth">header</header>
+        <section id="section" class="coWidth">
+            <section id="section1">
+                <div id="content">content</div>
+            </section>
+            <aside id="left">left</aside>
+            <aside id="right">right</aside>
+        </section>
+        <footer id="footer" class="coWidth">footer</footer>
+    </body>
+</html>

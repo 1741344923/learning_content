@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            .div1{
+                margin: 0 auto;
+                width: 900px;
+            }
+            #left{
+                width: 200px;
+                height: 500px;
+                background-color: #ccffff;
+                float: left;
+            }
+            #right{
+                height: 500px;
+                background-color: #ffcccc;
+                margin-left: 200px;
+            }
+        </style>
+        <!--
+            混合浮动+普通流
+        -->
+    </head>
+    <body>
+        <div class="div1">
+            <aside id="left"></aside>
+            <section id="right"></section>
+        </div>
+    </body>
+</html>
