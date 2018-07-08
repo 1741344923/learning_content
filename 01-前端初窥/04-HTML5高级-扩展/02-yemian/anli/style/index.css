@@ -63,26 +63,188 @@ body{
     width: 960px;
     height: 100px;
     margin: 0 auto;
+    position: relative;
+    background: url(../image/6.png) no-repeat;
 }
 #shopping{
     width: 260px;
     height: 100px;
     background: url(../image/5.png) no-repeat ;
+    position: relative;
 }
 #shopping p{
     color: #f7f7f7;
     font-size: 20px;
-    font-weight: bold;
     font-family: Arial;
-    padding: 30px 0 0 84px;
+    padding: 22px 0 0 84px;
 }
 #shopping a{
     width: 114px;
     height: 23px;
     display: block;
     background: url(../image/5.png) no-repeat 0 -100px;
+    position: absolute;
+    top: 63px;
+    left: 104px;
+    font-size: 15px;
+    color: #ffc200;
+    font-weight: bold;
+    text-align: center;
+    line-height: 23px;
+}
+#shopping a:hover{
+    color: #ffe388;
 }
 #header h1{
+    width: 238px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -119px;
+}
+#header .search{
+    top: 34px;
+    right: 0;
+}
+/*--------------------------*/
+.search {
+    width: 292px;
+    height: 31px;
+    background: url(../image/8.png) no-repeat;
+    position: absolute;
+    outline: none;
+}
+.search .text{
+    width: 230px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    background: none;
+    font-size: 13px;
+    color: #666;
+    outline: none;
+}
+.search .btn{
+    width: 42px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    height: 30px;
+}
+
+/*--------------*/
+#nav{
+    width: 960px;
+    height: 36px;
+    margin: 0 auto;
+    padding-top: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Arial;
+}
+#nav li{
+    float: left;
+    height: 28px;
+    margin-right: 2px;
+}
+#nav a{
+    float: left;
+    height: 28px;
+}
+#nav strong{
+    float: left;
+    height: 28px;
+    font-weight: normal;
 
 }
+#nav span{
+    float: left;
+    height: 28px;
+    padding: 0 16px;
+
+}
+
+#nav a:hover,#nav .active a{
+    background: url(../image/9.png) repeat-x 0 -58px;
+}
+#nav a:hover strong,#nav .active strong{
+    background: url(../image/9.png) no-repeat;
+}
+#nav a:hover span,#nav .active span{
+    background: url(../image/9.png) no-repeat right -29px;
+}
+
+/*-----------------------------------*/
+#content{
+    width: 1000px;
+    margin: 24px auto 0;
+    background: url(../image/10.png) repeat-x -1000px 0;
+}
+#content #content_top{
+    width: 1000px;
+    background: url(../image/10.png) no-repeat ;
+}
+#content #content_bottom{
+    width: 1000px;
+    background: url(../image/10.png) no-repeat -2000px bottom;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
