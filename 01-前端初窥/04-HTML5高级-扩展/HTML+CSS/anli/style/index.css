@@ -124,6 +124,7 @@ body{
     background: none;
     font-size: 13px;
     color: #666;
+    border: none;
     outline: none;
 }
 .search .btn{
@@ -246,6 +247,15 @@ body{
     z-index: 2;
     background-color: rgba(0,0,0,0.5);
 }
+/*-----------------------------*/
+#ad .next,#ad .prev{ width:75px; height:150px; margin-top:-75px; position:absolute; top:50%; z-index:6; display:none; }
+#ad .prev { background:url(../image/banner/prev.png); left:0; }
+#ad .next { background:url(../image/banner/next.png); right:0; }
+#ad .prev_bg,#ad .next_bg { position:absolute; top:0; z-index:5; width:470px; height:300px; filter:alpha(opacity:0); opacity:0; }
+#ad .prev_bg { left:0; background:yellow; }
+#ad .next_bg { right:0; background:red; }
+/*-----------------------------*/
+
 
 #main{
     width: 942px;

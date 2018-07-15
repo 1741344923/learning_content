@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>渐变</title>
+        <style>
+            #div1{
+                width: 200px;
+                height: 200px;
+                border: 1px solid #cccccc;
+                background:-moz-linear-gradient(top,#ffffff,#f8f8f8);
+                background:-webkit-linear-gradient(top,#ffffff,#f8f8f8);
+                background:-ms-linear-gradient(top,#ffffff,#f8f8f8);
+                background: linear-gradient(top,#ffffff,#f8f8f8);
+            }
+        </style>
+        <!--
+            浏览器前缀:
+            火狐：
+            background:-moz-linear-gradient(top,#ffffff,#f8f8f8);
+
+            谷歌：
+            background:-webkit-linear-gradient(top,#ffffff,#f8f8f8);
+
+            ie:
+            background:-ms-linear-gradient(top,#ffffff,#f8f8f8);
+
+            background: linear-gradient(top,#ffffff,#f8f8f8);
+        -->
+    </head>
+    <body>
+        <div id="div1"></div>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+#header {
+    width: 960px;
+    height: 30px;
+    margin: 0 auto;
+    border-radius: 0 0 6px 6px;
+}
+
+#nav {
+    width: 960px;
+    height: 100px;
+    margin: 0 auto;
+    background: pink;
+}
+
+#search {
+    width: 958px;
+    height: 114px;
+    margin: 0 auto 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 6px;
+}
+
+#section .bar {
+
+}
+
+.content {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.main {
+    width: 710px;
+}
+
+.section {
+    width: 318px;
+    height: 200px;
+    padding: 0 15px;
+    border: 1px solid #dbdbdb;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.options {
+    width: 350px;
+    height: 200px;
+    background: yellow;
+}
+
+.main_ad {
+    border-radius: 6px;
+    overflow:hidden;
+    margin-bottom: 10px;
+}
+
+.side {
+    width: 240px;
+}
+
+.side_section {
+    border-radius: 6px;
+}
+
+.side_ad {
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#footer {
+}
