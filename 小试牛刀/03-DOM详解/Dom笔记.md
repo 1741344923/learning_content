@@ -1,5 +1,100 @@
 ```
-初识DOM
+            javaScript 基础部分
+js实现原理：
+写一个js效果的步骤:
+1、先实现布局
+2、实现原理
+3、了解js语法
+
+希望把某个元素移除你的视线：
+1、display: none; 显示为无
+2、visibility: hidden;  隐藏
+3、width / height
+4、透明度
+5、left / top
+6、拿一个白色的div盖住它
+7、margin负值
+......
+
+
+js中如何获取元素：
+1、通过ID名称来获取元素
+    document get element by id
+    document.getElementById();
+
+事件：鼠标事件 键盘事件 系统事件 表单事件 自定义事件......
+
+onclick 点击事件
+onmouseover 鼠标移入事件
+onmouseut   鼠标移开事件
+onmousemove 鼠标移动事件
+onmousedown 鼠标按下的时候触发该事件
+onmouseup   鼠标抬起的时候触发该事件
+onkeydown   用户按下键盘按键
+......
+
+onload --- 加载完以后执行
+window.onload = 事情
+img.onload
+body.onload
+
+
+如何添加事件：
+元素.onmouseover
+
+
+函数: 可以理解为-命令，做一些事
+function abc (){}  // 不会主动执行的！
+
+1、直接调用 abc()
+2、事件调用 元素.事件 = 函数名 div.onclick = abc;
+
+function () {} 匿名函数
+
+测试：alert(1); 带一个确定按钮的警告框！！！
+     alert('ok'); 'ok' 字符串
+
+
+变量：
+var li = document.getElementById();
+var num = 123;
+var name = 'leo';
+
+
+HTML属性操作: 读 写
+    属性名
+    属性值
+
+属性读操作: 获取 找到
+元素.属性名
+
+属性写操作：(添加)替换 修改
+元素.属性名 = 新的值
+
+字符串链接：
+
+innerHTML           读取标签中间的所有HTML代码
+innerHTML = 新的值   替换标签中间的HTML内容
+
+a = a+b === a+=b;
+
+JS中不允许出现 -
+font-size === fontSize
+
+class 保留字 class => className
+关键字：var function
+
+所有的相对路径都别拿来做判断！！！
+颜色值也别拿来做判断！！！
+innerHTML的值别拿来做判断！！！
+img src
+href
+
+```
+
+
+```
+                    初识DOM
 一般分为三大关系:
 父级关系: 只有一层上下级关系(从当前往上找)。
 子级关系: 只有以下一层的关系。
@@ -112,5 +207,12 @@ parentNode.insertBefore(新添加的元素，已有的元素)
 的所有子节点，（cloneNode(有参数，默认为false)）,如果里面传入true
 那么就可以克隆该元素下的所有子节点，事件是不会被克隆的。
 
+
+操作表格:
+table.tHead --- 获取表格头部
+table.tFoot --- 获取表格底部
+table.tBodies --- 获取表格主题(获取到的是一个集合)
+table.rows --- 获取tr 获取的是行数(一组)
+.rows[].cells 单元格 就是td
 
 ```
