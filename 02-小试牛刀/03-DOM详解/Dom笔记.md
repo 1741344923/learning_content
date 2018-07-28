@@ -1,5 +1,13 @@
 
 ```
+javaScript由三部分组成:
+ECMAscript(javaScript核心标准，也是一个解析器)
+DOM(通过document提供的一些方法或者属性来操作页面)
+BOM(通过window提供的一些方法或者属性来操作浏览器)
+
+```
+
+```
 DOM : document Object Model
         文档 对象 模型
         整个页面文档

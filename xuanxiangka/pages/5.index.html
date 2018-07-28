@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../js/jquery-1.7.2.min.js"></script>
+        <style>
+            body{
+                margin: 0;
+            }
+            ul{
+                margin: 0;
+                padding: 0;
+            }
+            li{
+                list-style: none;
+            }
+            #div1{
+                width: 500px;
+                height: 400px;
+                border: 1px solid #cccccc;
+                margin: 50px auto 0;
+            }
+            #div1 .hd{
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+            }
+            #div1 .hd input{
+                width: 60px;
+                height: 30px;
+                line-height: 30px;
+                margin: 0 10px;
+                background-color: #ffcccc;
+                color: #fff;
+                border: none;
+            }
+            #div1 .hd input.active{
+                background-color: red;
+            }
+            #div1 .bd ul li{
+                display: none;
+            }
+            #div1 .bd ul li.on{
+                display: block;
+            }
+            #div1 .bd ul li img{
+                width: 500px;
+                height: 340px;
+            }
+        </style>
+
+        <script>
+            /*window.addEventListener('load',function () {
+                var Btn = document.querySelectorAll('#div1 .hd input');
+                var Img = document.querySelectorAll('#div1 .bd ul li');
+
+                for ( var i=0;i<Btn.length;i++ ){
+                    Btn[i].index = i;
+                    Btn[i].addEventListener('click',function () {
+                        for ( var i=0;i<Btn.length;i++ ){
+                            Btn[i].classList.remove('active');
+                            Img[i].classList.remove('on');
+                        }
+                        this.classList.add('active');
+                        Img[this.index].classList.add('on');
+                    });
+                }
+            });*/
+
+            /* window.addEventListener('load',function () {
+                var Btn = document.querySelectorAll('#div1 .hd input');
+                var Img = document.querySelectorAll('#div1 .bd ul li');
+
+                for ( var i=0;i<Btn.length;i++ ){
+                    Btn[i].index = i;
+                    Btn[i].addEventListener('click',function () {
+                        for ( var i=0;i<Btn.length;i++ ){
+                            Btn[i].classList.remove('active');
+                            Img[i].classList.remove('on');
+                        }
+                        this.classList.add('active');
+                        Img[this.index].classList.add('on');
+                    });
+                }
+            });*/
+
+            /*window.addEventListener('load',function () {
+               var Btn = document.querySelectorAll('#div1 .hd input');
+               var Img = document.querySelectorAll('#div1 .bd ul li');
+
+               for ( var i=0;i<Btn.length;i++ ){
+                   Btn[i].index = i;
+                   Btn[i].addEventListener('click',function () {
+                       for ( var i=0;i<Btn.length;i++ ){
+                           Btn[i].classList.remove('active');
+                           Img[i].classList.remove('on');
+                       }
+                       this.classList.add('active');
+                       Img[this.index].classList.add('on');
+                   });
+               }
+           });*/
+
+            /*window.addEventListener('load',function () {
+                var Btn = document.querySelectorAll('#div1 .hd input');
+                var Img = document.querySelectorAll('#div1 .bd ul li');
+
+                for ( var i=0;i<Btn.length;i++ ){
+                    Btn[i].index = i;
+                    Btn[i].addEventListener('click',function () {
+                        for ( var i=0;i<Btn.length;i++ ){
+                            Btn[i].classList.remove('active');
+                            Img[i].classList.remove('on');
+                        }
+                        this.classList.add('active');
+                        Img[this.index].classList.add('on');
+                    });
+                }
+            });*/
+
+
+            /*$(function () {
+                $('#div1 .hd input').on('click',function () {
+                    var s = $(this).index();
+
+                    $(this).addClass('active')
+                        .siblings()
+                        .removeClass('active');
+
+                    $('#div1 .bd ul li').eq(s)
+                        .addClass('on')
+                        .siblings()
+                        .removeClass('on');
+                });
+            });*/
+
+            /*$(document).ready(function () {
+                $('#div1 .hd input').on('click',function () {
+                    var s = $(this).index();
+
+                    $(this).addClass('active')
+                        .siblings()
+                        .removeClass('active');
+
+                    $('#div1 .bd ul li').eq(s)
+                        .addClass('on')
+                        .siblings()
+                        .removeClass('on');
+                });
+            });*/
+        </script>
+    </head>
+    <body>
+        <div id="div1">
+            <div class="hd"><input class="active" type="button" value="1"/><input type="button" value="2"/><input type="button" value="3"/><input type="button" value="4"/><input class="mr0" type="button" value="5"/></div>
+            <div class="bd">
+                <ul>
+                    <li class="on"><img src="../image/6.jpg" alt=""></li>
+                    <li><img src="../image/2.jpg" alt=""></li>
+                    <li><img src="../image/3.jpg" alt=""></li>
+                    <li><img src="../image/4.jpg" alt=""></li>
+                    <li><img src="../image/5.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

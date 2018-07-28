@@ -147,13 +147,49 @@ js可以动态的为任意一个HTML元素添加自定义属性
 ```
 
 ```
-javaScript由三部分组成:
-ECMAscript(javaScript核心标准，也是一个解析器)
-DOM(通过document提供的一些方法或者属性来操作页面)
-BOM(通过window提供的一些方法或者属性来操作浏览器)
+            JS的数据类型
+ECMAScript: 标准 核心
+HTML标签类型: block inline inline-block table...
+JS中的数据类型：数字、字符串、布尔值、对象、未定义
 
+            number      数字
+            string      字符串 (可以获取字符串的长度 注意：不能敲空格)
+            true false  布尔值 boolean
+            function    函数
+            object (window document [] {} null )
+            undefined 未定义
+
+typeof 判断数据类型
+charAt(2); 找到字符串中的某个字符串
+push(); 往数组的末尾添加内容
+Number(); 函数把对象的值转换为数字,空的字符串会转换出来一个数字0
+布尔值 true-1 false-0
+[] 空数组转出来的也是0
+null 转换 0
+
+
+函数转换不了--NaN
+{} 转不了
+未定义 转不了
+
+
+parseInt()    从左往右，不是数字后面的统统截取掉
+parseFloat()  认识一个小数点
+
+Number()
+parseInt()
+parseFloat() 显示类型转换 强制类型转换
+
+隐式类型转换:
+
+ +          200 + '3' === 2003 变成字符串
+- * / %     '200' - 3 === 197 变成数字
+++ --       变成数字
+> <         数字的比较还是字符串的比较
+字符串与字符串比较，比较的是第一位数字
+！取反 把右边的数据类型转换成布尔值
+==
 ```
-
 
 
 
