@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            #pic{
+                width: 500px;
+                height: 300px;
+                border: 1px solid #cccccc;
+                position: relative;
+                margin: 50px auto 0;
+            }
+            #pic img{
+                width: 100%;
+                height: 100%;
+            }
+            #pic span{
+                display: block;
+                top: 0;
+            }
+            #pic span, #pic p{
+                width: 500px;
+                height: 30px;
+                line-height: 30px;
+                background: rgba(0,0,0,0.5);
+                text-align: center;
+                color: #ffffff;
+                position: absolute;
+                left: 0;
+            }
+            #pic p{
+                bottom: 0;
+                margin: 0;
+            }
+            #pic ul{
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                right: -60px;
+                top: 10px;
+            }
+            #pic ul li{
+                width: 40px;
+                height: 40px;
+                background-color: #99ccff;
+                list-style: none;
+                margin-bottom: 10px;
+            }
+            #pic .active{
+                background-color: pink;
+            }
+        </style>
+
+        <script>
+            window.addEventListener('load',function () {
+                var Pic = document.querySelector('#pic');
+                var Img = document.querySelector('#img1');
+                var Span = document.querySelector('#span1');
+                var P1 = document.querySelector('#p1');
+                var Ul = document.querySelector('.ul1');
+                var Li = document.querySelector('li');
+
+                var arrUrl = ['../image/1.jpg','../image/2.jpg','../image/3.jpg','../image/4.jpg'];
+                var arrText = ['第一张','第二张','第三张','第四张'];
+
+                for ( var i=0;i<arrUrl.length;i++ ){
+                    Ul.innerHTML += '<li></li>';
+                }
+
+                var num = 0;
+                Img.src = arrUrl[num];
+                P1.innerHTML = arrText[num];
+                Span.innerHTML = 1+this.index+'/'+arrUrl.length;
+
+                Li[num].className = 'active';
+
+                for ( var i=0;i<)
+            })
+        </script>
+    </head>
+    <body>
+        <div id="pic">
+            <img id="img1" src="../image/1.jpg" alt="">
+            <span class="span1">数量正在加载中......</span>
+            <p class="p1">文字说明正在加载中......</p>
+            <ul class="ul1">
+
+            </ul>
+        </div>
+    </body>
+</html>
